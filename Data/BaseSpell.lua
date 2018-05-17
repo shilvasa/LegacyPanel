@@ -1,1 +1,0 @@
-BaseActiveSpells={["WARRIOR"]={[1]={[72]={gp=0,},},},};BasePassiveSpells={};BaseTalentSpells={};

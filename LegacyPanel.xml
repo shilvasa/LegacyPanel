@@ -12,59 +12,66 @@
             </Anchor>
         </Anchors>
         <Frames>
-            <Frame name="$parent_Nav">
+            <Frame name="LegacyUI_Nav">
                 <Size>
                     <AbsDimension x="1024" y="200"/>
                 </Size>
                 <Anchors>
                     <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent">
-                        <Offset x="0" y="0"/>
+                        <Offset x="0" y="1"/>
                     </Anchor>
                 </Anchors>
                 <Frames>
-                    <Button name="$parent1" inherits="LegacyNavButtonTemplate" id="1">
-                        <Anchors>
+					<Button name="$parent0" inherits="LegacyHomeNavTokenTemplate" id="0">
+						<Anchors>
                             <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                 <Offset x="-506" y="-118"/>
                             </Anchor>
                         </Anchors>
+					</Button>
+                    <Button name="$parent1" inherits="LegacyHomeNavTokenTemplate" id="1">
+                        <Anchors>
+                            <Anchor point="CENTER" relativeTo="$parent0" relativePoint="CENTER">
+                                <Offset x="89" y="0"/>
+                            </Anchor>
+                        </Anchors>
                     </Button>
-                    <Button name="$parent2" inherits="LegacyNavButtonTemplate" id="2">
+                    <Button name="$parent2" inherits="LegacyHomeNavTokenTemplate" id="2">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent1" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-                    <Button name="$parent3" inherits="LegacyNavButtonTemplate" id="3">
+                    <Button name="$parent3" inherits="LegacyHomeNavTokenTemplate" id="3">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent2" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-                    <Button name="$parent4" inherits="LegacyNavButtonTemplate" id="4">
+                    <Button name="$parent4" inherits="LegacyHomeNavTokenTemplate" id="4">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent3" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-                    <Button name="$parent5" inherits="LegacyNavButtonTemplate" id="5">
+                    <Button name="$parent5" inherits="LegacyHomeNavTokenTemplate" id="5">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent4" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-					<Button name="$parent6" inherits="LegacyNavButtonTemplate" id="6">
+					<Button name="$parent6" inherits="LegacyHomeNavTokenTemplate" id="6">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent5" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-					<Button name="$parent7" inherits="LegacyNavButtonTemplate" id="7">
+					<Button name="$parent7" inherits="LegacyHomeNavTokenTemplate" id="7">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent6" relativePoint="CENTER">
                                 <Offset x="89" y="0"/>
@@ -73,7 +80,299 @@
                     </Button>
                 </Frames>
             </Frame>
-            <Frame name="$parent_Page1">
+			<Frame name="LegacyUI_Page0">
+                <Size>
+                    <AbsDimension x="1024" y="1024"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent">
+                        <Offset x="0" y="0"/>
+                    </Anchor>
+                </Anchors>
+				<Frames>
+					<Button name="LegacyUI_BuildSwitch1" inherits="LegacyClassSwitchToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+								<Offset x="-551" y="-40"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_BuildSwitch2" inherits="LegacyClassSwitchToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch1" relativePoint="CENTER">
+								<Offset x="-44" y="77"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_BuildSwitch3" inherits="LegacyClassSwitchToken" id="3">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch2" relativePoint="CENTER">
+								<Offset x="44" y="77"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpellNavPrev" inherits="LegacyClassSpellNavToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch1" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell1" inherits="LegacyClassSpellToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpellNavPrev" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell2" inherits="LegacyClassSpellToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell1" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell3" inherits="LegacyClassSpellToken" id="3">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell2" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell4" inherits="LegacyClassSpellToken" id="4">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell3" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell5" inherits="LegacyClassSpellToken" id="5">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell4" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell6" inherits="LegacyClassSpellToken" id="6">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell5" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell7" inherits="LegacyClassSpellToken" id="7">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell6" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell8" inherits="LegacyClassSpellToken" id="8">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell7" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell9" inherits="LegacyClassSpellToken" id="9">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell8" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpell10" inherits="LegacyClassSpellToken" id="10">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell9" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSpellNavNext" inherits="LegacyClassSpellNavToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpell10" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemoryNavPrev" inherits="LegacyClassMemoryNavToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch2" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory1" inherits="LegacyClassMemoryToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemoryNavPrev" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory2" inherits="LegacyClassMemoryToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory1" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory3" inherits="LegacyClassMemoryToken" id="3">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory2" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory4" inherits="LegacyClassMemoryToken" id="4">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory3" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory5" inherits="LegacyClassMemoryToken" id="5">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory4" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory6" inherits="LegacyClassMemoryToken" id="6">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory5" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory7" inherits="LegacyClassMemoryToken" id="7">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory6" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory8" inherits="LegacyClassMemoryToken" id="8">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory7" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory9" inherits="LegacyClassMemoryToken" id="9">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory8" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory10" inherits="LegacyClassMemoryToken" id="10">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory9" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemory11" inherits="LegacyClassMemoryToken" id="11">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory10" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassMemoryNavNext" inherits="LegacyClassMemoryNavToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemory11" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkillNavPrev" inherits="LegacyClassSkillNavToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch3" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill1" inherits="LegacyClassSkillToken" id="1">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkillNavPrev" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill2" inherits="LegacyClassSkillToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill1" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill3" inherits="LegacyClassSkillToken" id="3">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill2" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill4" inherits="LegacyClassSkillToken" id="4">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill3" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill5" inherits="LegacyClassSkillToken" id="5">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill4" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill6" inherits="LegacyClassSkillToken" id="6">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill5" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill7" inherits="LegacyClassSkillToken" id="7">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill6" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill8" inherits="LegacyClassSkillToken" id="8">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill7" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill9" inherits="LegacyClassSkillToken" id="9">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill8" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkill10" inherits="LegacyClassSkillToken" id="10">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill9" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+					<Button name="LegacyUI_ClassSkillNavNext" inherits="LegacyClassSkillNavToken" id="2">
+						<Anchors>
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkill10" relativePoint="CENTER">
+								<Offset x="89" y="0"/>
+							</Anchor>
+						</Anchors>
+					</Button>
+				</Frames>
+			</Frame>
+            <Frame name="LegacyUI_Page1" hidden="true">
                 <Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -83,57 +382,57 @@
                     </Anchor>
                 </Anchors>
                 <Frames>
-                    <Button name="LegacyUI_GPItem" inherits="LegacyGPItemTemplate">
+                    <Button name="LegacyUI_Stat" inherits="LegacyStatTokenTemplate">
                         <Anchors>
                             <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                 <Offset x="-506" y="37"/>
                             </Anchor>
                         </Anchors>
                     </Button>
-                    <Frame name="LegacyUI_Stat">
+                    <Frame name="LegacyUI_Specialty">
                         <Size x="300" y="300"/>
                         <Anchors>
-                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_GPItem">
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_Stat">
                                 <Offset x="0" y="0"/>
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="$parentSpecialty1" inherits="LegacyStatAbilityItemTemplate" id="1">
+                            <Button name="LegacyUI_Specialty1" inherits="LegacySpecialtyTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpecialty2" inherits="LegacyStatAbilityItemTemplate" id="2">
+                            <Button name="LegacyUI_Specialty2" inherits="LegacySpecialtyTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-44" y="-77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpecialty3" inherits="LegacyStatAbilityItemTemplate" id="3">
+                            <Button name="LegacyUI_Specialty3" inherits="LegacySpecialtyTokenTemplate" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="44" y="-77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpecialty4" inherits="LegacyStatAbilityItemTemplate" id="4">
+                            <Button name="LegacyUI_Specialty4" inherits="LegacySpecialtyTokenTemplate" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpecialty5" inherits="LegacyStatAbilityItemTemplate" id="5">
+                            <Button name="LegacyUI_Specialty5" inherits="LegacySpecialtyTokenTemplate" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpecialty6" inherits="LegacyStatAbilityItemTemplate" id="6">
+                            <Button name="LegacyUI_Specialty6" inherits="LegacySpecialtyTokenTemplate" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
@@ -142,246 +441,246 @@
                             </Button>
                         </Frames>
                     </Frame>
-                    <Frame name="LegacyUI_Active">
+                    <Frame name="LegacyUI_RuneA">
                         <Size>
                             <AbsDimension x="1024" y="200"/>
                         </Size>
                         <Anchors>
-                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_GPItem">
-                                <Offset x="0" y="0"/>
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_Stat">
+                                <Offset x="-1" y="0"/>
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="$parentSpell1" inherits="LegacyActiveAbilityItemTemplate" id="1">
+                            <Button name="LegacyUI_RuneA1" inherits="LegacyRuneTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="134" y="-77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell2" inherits="LegacyActiveAbilityItemTemplate" id="2">
+                            <Button name="LegacyUI_RuneA2" inherits="LegacyRuneTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell3" inherits="LegacyActiveAbilityItemTemplate" id="3">
+                            <Button name="LegacyUI_RuneA3" inherits="LegacyRuneTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell4" inherits="LegacyActiveAbilityItemTemplate" id="4">
+                            <Button name="LegacyUI_RuneA4" inherits="LegacyRuneTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell5" inherits="LegacyActiveAbilityItemTemplate" id="5">
+                            <Button name="LegacyUI_RuneA5" inherits="LegacyRuneTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell6" inherits="LegacyActiveAbilityItemTemplate" id="6">
+                            <Button name="LegacyUI_RuneA6" inherits="LegacyRuneTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell7" inherits="LegacyActiveAbilityItemTemplate" id="7">
+                            <Button name="LegacyUI_RuneA7" inherits="LegacyRuneTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell8" inherits="LegacyActiveAbilityItemTemplate" id="8">
+                            <Button name="LegacyUI_RuneA8" inherits="LegacyRuneTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell9" inherits="LegacyActiveAbilityItemTemplate" id="9">
+                            <Button name="LegacyUI_RuneA9" inherits="LegacyRuneTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell10" inherits="LegacyActiveAbilityItemTemplate" id="10">
+                            <Button name="LegacyUI_RuneA10" inherits="LegacyRuneTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneA9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
                         </Frames>
                     </Frame>
-                    <Frame name="LegacyUI_Passive">
+                    <Frame name="LegacyUI_RuneB">
                         <Size>
                             <AbsDimension x="1024" y="200"/>
                         </Size>
                         <Anchors>
-                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_GPItem">
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_Stat">
                                 <Offset x="0" y="0"/>
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="$parentSpell1" inherits="LegacyPassiveAbilityItemTemplate" id="1">
+                            <Button name="LegacyUI_RuneB1" inherits="LegacyRuneTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="178" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell2" inherits="LegacyPassiveAbilityItemTemplate" id="2">
+                            <Button name="LegacyUI_RuneB2" inherits="LegacyRuneTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell3" inherits="LegacyPassiveAbilityItemTemplate" id="3">
+                            <Button name="LegacyUI_RuneB3" inherits="LegacyRuneTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell4" inherits="LegacyPassiveAbilityItemTemplate" id="4">
+                            <Button name="LegacyUI_RuneB4" inherits="LegacyRuneTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell5" inherits="LegacyPassiveAbilityItemTemplate" id="5">
+                            <Button name="LegacyUI_RuneB5" inherits="LegacyRuneTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell6" inherits="LegacyPassiveAbilityItemTemplate" id="6">
+                            <Button name="LegacyUI_RuneB6" inherits="LegacyRuneTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell7" inherits="LegacyPassiveAbilityItemTemplate" id="7">
+                            <Button name="LegacyUI_RuneB7" inherits="LegacyRuneTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell8" inherits="LegacyPassiveAbilityItemTemplate" id="8">
+                            <Button name="LegacyUI_RuneB8" inherits="LegacyRuneTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell9" inherits="LegacyPassiveAbilityItemTemplate" id="9">
+                            <Button name="LegacyUI_RuneB9" inherits="LegacyRuneTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell10" inherits="LegacyPassiveAbilityItemTemplate" id="10">
+                            <Button name="LegacyUI_RuneB10" inherits="LegacyRuneTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneB9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
                         </Frames>
                     </Frame>
-                    <Frame name="LegacyUI_Talent">
+                    <Frame name="LegacyUI_RuneC">
                         <Size>
                             <AbsDimension x="1024" y="200"/>
                         </Size>
                         <Anchors>
-                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_GPItem">
-                                <Offset x="0" y="0"/>
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="LegacyUI_Stat">
+                                <Offset x="-1" y="0"/>
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="$parentSpell1" inherits="LegacyTalentAbilityItemTemplate" id="1">
+                            <Button name="LegacyUI_RuneC1" inherits="LegacyRuneTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="134" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell2" inherits="LegacyTalentAbilityItemTemplate" id="2">
+                            <Button name="LegacyUI_RuneC2" inherits="LegacyRuneTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell3" inherits="LegacyTalentAbilityItemTemplate" id="3">
+                            <Button name="LegacyUI_RuneC3" inherits="LegacyRuneTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell4" inherits="LegacyTalentAbilityItemTemplate" id="4">
+                            <Button name="LegacyUI_RuneC4" inherits="LegacyRuneTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell5" inherits="LegacyTalentAbilityItemTemplate" id="5">
+                            <Button name="LegacyUI_RuneC5" inherits="LegacyRuneTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="$parentSpell6" inherits="LegacyTalentAbilityItemTemplate" id="6">
+							<Button name="LegacyUI_RuneC6" inherits="LegacyRuneTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell7" inherits="LegacyTalentAbilityItemTemplate" id="7">
+                            <Button name="LegacyUI_RuneC7" inherits="LegacyRuneTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell8" inherits="LegacyTalentAbilityItemTemplate" id="8">
+                            <Button name="LegacyUI_RuneC8" inherits="LegacyRuneTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell9" inherits="LegacyTalentAbilityItemTemplate" id="9">
+                            <Button name="LegacyUI_RuneC9" inherits="LegacyRuneTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="$parentSpell10" inherits="LegacyTalentAbilityItemTemplate" id="10">
+                            <Button name="LegacyUI_RuneC10" inherits="LegacyRuneTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="$parentSpell9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_RuneC9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
@@ -390,7 +689,7 @@
                     </Frame>
                 </Frames>
             </Frame>
-			<Frame name="$parent_Page2" hidden="true">
+			<Frame name="LegacyUI_Page2" hidden="true">
 				<Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -410,91 +709,91 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_TransmogSlotItem1" inherits="LegacyTransmogSlotItem" id="0">
+                            <Button name="LegacyUI_TransmogSlotItem1" inherits="LegacyTransmogSlotToken" id="0">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem2" inherits="LegacyTransmogSlotItem" id="2">
+                            <Button name="LegacyUI_TransmogSlotItem2" inherits="LegacyTransmogSlotToken" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem3" inherits="LegacyTransmogSlotItem" id="3">
+                            <Button name="LegacyUI_TransmogSlotItem3" inherits="LegacyTransmogSlotToken" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem4" inherits="LegacyTransmogSlotItem" id="4">
+                            <Button name="LegacyUI_TransmogSlotItem4" inherits="LegacyTransmogSlotToken" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem5" inherits="LegacyTransmogSlotItem" id="5">
+                            <Button name="LegacyUI_TransmogSlotItem5" inherits="LegacyTransmogSlotToken" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem6" inherits="LegacyTransmogSlotItem" id="6">
+                            <Button name="LegacyUI_TransmogSlotItem6" inherits="LegacyTransmogSlotToken" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem7" inherits="LegacyTransmogSlotItem" id="7">
+                            <Button name="LegacyUI_TransmogSlotItem7" inherits="LegacyTransmogSlotToken" id="7">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem8" inherits="LegacyTransmogSlotItem" id="8">
+                            <Button name="LegacyUI_TransmogSlotItem8" inherits="LegacyTransmogSlotToken" id="8">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem9" inherits="LegacyTransmogSlotItem" id="9">
+                            <Button name="LegacyUI_TransmogSlotItem9" inherits="LegacyTransmogSlotToken" id="9">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem10" inherits="LegacyTransmogSlotItem" id="14">
+                            <Button name="LegacyUI_TransmogSlotItem10" inherits="LegacyTransmogSlotToken" id="14">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem11" inherits="LegacyTransmogSlotItem" id="15">
+                            <Button name="LegacyUI_TransmogSlotItem11" inherits="LegacyTransmogSlotToken" id="15">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem1" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem12" inherits="LegacyTransmogSlotItem" id="16">
+                            <Button name="LegacyUI_TransmogSlotItem12" inherits="LegacyTransmogSlotToken" id="16">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogSlotItem13" inherits="LegacyTransmogSlotItem" id="17">
+							<Button name="LegacyUI_TransmogSlotItem13" inherits="LegacyTransmogSlotToken" id="17">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem12" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
@@ -513,98 +812,98 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_TransmogItem0" inherits="LegacyTransmogItem" id="0">
+                            <Button name="LegacyUI_TransmogItem0" inherits="LegacyTransmogToken" id="0">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="0" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem1" inherits="LegacyTransmogItem" id="1">
+                            <Button name="LegacyUI_TransmogItem1" inherits="LegacyTransmogToken" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem0" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem2" inherits="LegacyTransmogItem" id="2">
+                            <Button name="LegacyUI_TransmogItem2" inherits="LegacyTransmogToken" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem3" inherits="LegacyTransmogItem" id="3">
+                            <Button name="LegacyUI_TransmogItem3" inherits="LegacyTransmogToken" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem4" inherits="LegacyTransmogItem" id="4">
+                            <Button name="LegacyUI_TransmogItem4" inherits="LegacyTransmogToken" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem5" inherits="LegacyTransmogItem" id="5">
+                            <Button name="LegacyUI_TransmogItem5" inherits="LegacyTransmogToken" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem6" inherits="LegacyTransmogItem" id="6">
+                            <Button name="LegacyUI_TransmogItem6" inherits="LegacyTransmogToken" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem7" inherits="LegacyTransmogItem" id="7">
+                            <Button name="LegacyUI_TransmogItem7" inherits="LegacyTransmogToken" id="7">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem8" inherits="LegacyTransmogItem" id="8">
+                            <Button name="LegacyUI_TransmogItem8" inherits="LegacyTransmogToken" id="8">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem9" inherits="LegacyTransmogItem" id="9">
+                            <Button name="LegacyUI_TransmogItem9" inherits="LegacyTransmogToken" id="9">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem10" inherits="LegacyTransmogItem" id="10">
+                            <Button name="LegacyUI_TransmogItem10" inherits="LegacyTransmogToken" id="10">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem11" inherits="LegacyTransmogItem" id="11">
+                            <Button name="LegacyUI_TransmogItem11" inherits="LegacyTransmogToken" id="11">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogNavItem1" inherits="LegacyTransmogNavItem" id="1" hidden="true">
+							<Button name="LegacyUI_TransmogNavItem1" inherits="LegacyTransmogNavToken" id="1" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogNavItem2" inherits="LegacyTransmogNavItem" id="2" hidden="true">
+							<Button name="LegacyUI_TransmogNavItem2" inherits="LegacyTransmogNavToken" id="2" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
@@ -615,7 +914,7 @@
                     </Frame>
 				</Frames>
 			</Frame>
-			<Frame name="$parent_Page3" hidden="true">
+			<Frame name="LegacyUI_Page3" hidden="true">
                 <Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -625,147 +924,147 @@
                     </Anchor>
                 </Anchors>
 				<Frames>
-					<Button name="LegacyUI_GuildRankIndicatorLeft" inherits="LegacyGuildRankIndicator" id="1">
+					<Button name="LegacyUI_GuildRankIndicatorLeft" inherits="LegacyGuildRankTokenTemplate" id="1">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
 								<Offset x="-551" y="-40"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildRankIndicatorRight" inherits="LegacyGuildRankIndicator" id="2">
+					<Button name="LegacyUI_GuildRankIndicatorRight" inherits="LegacyGuildRankTokenTemplate" id="2">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
 								<Offset x="428" y="-40"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress1" inherits="LegacyGuildRankProgressItem" id="1">
+					<Button name="LegacyUI_GuildProgress1" inherits="LegacyGuildRankProgressTokenTemplate" id="1">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
 								<Offset x="-462" y="-40"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress2" inherits="LegacyGuildRankProgressItem" id="2">
+					<Button name="LegacyUI_GuildProgress2" inherits="LegacyGuildRankProgressTokenTemplate" id="2">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress1" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress3" inherits="LegacyGuildRankProgressItem" id="3">
+					<Button name="LegacyUI_GuildProgress3" inherits="LegacyGuildRankProgressTokenTemplate" id="3">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress2" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress4" inherits="LegacyGuildRankProgressItem" id="4">
+					<Button name="LegacyUI_GuildProgress4" inherits="LegacyGuildRankProgressTokenTemplate" id="4">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress3" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress5" inherits="LegacyGuildRankProgressItem" id="5">
+					<Button name="LegacyUI_GuildProgress5" inherits="LegacyGuildRankProgressTokenTemplate" id="5">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress4" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress6" inherits="LegacyGuildRankProgressItem" id="6">
+					<Button name="LegacyUI_GuildProgress6" inherits="LegacyGuildRankProgressTokenTemplate" id="6">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress5" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress7" inherits="LegacyGuildRankProgressItem" id="7">
+					<Button name="LegacyUI_GuildProgress7" inherits="LegacyGuildRankProgressTokenTemplate" id="7">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress6" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress8" inherits="LegacyGuildRankProgressItem" id="8">
+					<Button name="LegacyUI_GuildProgress8" inherits="LegacyGuildRankProgressTokenTemplate" id="8">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress7" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress9" inherits="LegacyGuildRankProgressItem" id="9">
+					<Button name="LegacyUI_GuildProgress9" inherits="LegacyGuildRankProgressTokenTemplate" id="9">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress8" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildProgress10" inherits="LegacyGuildRankProgressItem" id="10">
+					<Button name="LegacyUI_GuildProgress10" inherits="LegacyGuildRankProgressTokenTemplate" id="10">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress9" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus1" inherits="LegacyGuildBonusItem" id="1">
+					<Button name="LegacyUI_GuildBonus1" inherits="LegacyGuildBonusTokenTemplate" id="1">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildProgress1" relativePoint="CENTER">
 								<Offset x="44" y="77"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus2" inherits="LegacyGuildBonusItem" id="2">
+					<Button name="LegacyUI_GuildBonus2" inherits="LegacyGuildBonusTokenTemplate" id="2">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus1" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus3" inherits="LegacyGuildBonusItem" id="3">
+					<Button name="LegacyUI_GuildBonus3" inherits="LegacyGuildBonusTokenTemplate" id="3">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus2" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus4" inherits="LegacyGuildBonusItem" id="4">
+					<Button name="LegacyUI_GuildBonus4" inherits="LegacyGuildBonusTokenTemplate" id="4">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus3" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus5" inherits="LegacyGuildBonusItem" id="5">
+					<Button name="LegacyUI_GuildBonus5" inherits="LegacyGuildBonusTokenTemplate" id="5">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus4" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus6" inherits="LegacyGuildBonusItem" id="6">
+					<Button name="LegacyUI_GuildBonus6" inherits="LegacyGuildBonusTokenTemplate" id="6">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus5" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus7" inherits="LegacyGuildBonusItem" id="7">
+					<Button name="LegacyUI_GuildBonus7" inherits="LegacyGuildBonusTokenTemplate" id="7">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus6" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus8" inherits="LegacyGuildBonusItem" id="8">
+					<Button name="LegacyUI_GuildBonus8" inherits="LegacyGuildBonusTokenTemplate" id="8">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus7" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_GuildBonus9" inherits="LegacyGuildBonusItem" id="9">
+					<Button name="LegacyUI_GuildBonus9" inherits="LegacyGuildBonusTokenTemplate" id="9">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="LegacyUI_GuildBonus8" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
@@ -774,7 +1073,7 @@
 					</Button>
 				</Frames>
 			</Frame>
-			<Frame name="$parent_Page4" hidden="true">
+			<Frame name="LegacyUI_Page4" hidden="true">
                 <Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -794,266 +1093,266 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_LegacyItem1" inherits="LegacyItemTemplate" id="1">
+                            <Button name="LegacyUI_LegacyItem1" inherits="LegacyItemTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem2" inherits="LegacyItemTemplate" id="2">
+                            <Button name="LegacyUI_LegacyItem2" inherits="LegacyItemTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem3" inherits="LegacyItemTemplate" id="3">
+                            <Button name="LegacyUI_LegacyItem3" inherits="LegacyItemTokenTemplate" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem4" inherits="LegacyItemTemplate" id="4">
+                            <Button name="LegacyUI_LegacyItem4" inherits="LegacyItemTokenTemplate" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem5" inherits="LegacyItemTemplate" id="5">
+                            <Button name="LegacyUI_LegacyItem5" inherits="LegacyItemTokenTemplate" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem6" inherits="LegacyItemTemplate" id="6">
+                            <Button name="LegacyUI_LegacyItem6" inherits="LegacyItemTokenTemplate" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem7" inherits="LegacyItemTemplate" id="7">
+                            <Button name="LegacyUI_LegacyItem7" inherits="LegacyItemTokenTemplate" id="7">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem8" inherits="LegacyItemTemplate" id="8">
+                            <Button name="LegacyUI_LegacyItem8" inherits="LegacyItemTokenTemplate" id="8">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem9" inherits="LegacyItemTemplate" id="9">
+                            <Button name="LegacyUI_LegacyItem9" inherits="LegacyItemTokenTemplate" id="9">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem10" inherits="LegacyItemTemplate" id="10">
+                            <Button name="LegacyUI_LegacyItem10" inherits="LegacyItemTokenTemplate" id="10">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem11" inherits="LegacyItemTemplate" id="11">
+                            <Button name="LegacyUI_LegacyItem11" inherits="LegacyItemTokenTemplate" id="11">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem12" inherits="LegacyItemTemplate" id="12">
+                            <Button name="LegacyUI_LegacyItem12" inherits="LegacyItemTokenTemplate" id="12">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem1" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem13" inherits="LegacyItemTemplate" id="13">
+                            <Button name="LegacyUI_LegacyItem13" inherits="LegacyItemTokenTemplate" id="13">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem12" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem14" inherits="LegacyItemTemplate" id="14">
+                            <Button name="LegacyUI_LegacyItem14" inherits="LegacyItemTokenTemplate" id="14">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem13" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem15" inherits="LegacyItemTemplate" id="15">
+                            <Button name="LegacyUI_LegacyItem15" inherits="LegacyItemTokenTemplate" id="15">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem14" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem16" inherits="LegacyItemTemplate" id="16">
+                            <Button name="LegacyUI_LegacyItem16" inherits="LegacyItemTokenTemplate" id="16">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem15" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem17" inherits="LegacyItemTemplate" id="17">
+                            <Button name="LegacyUI_LegacyItem17" inherits="LegacyItemTokenTemplate" id="17">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem16" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem18" inherits="LegacyItemTemplate" id="18">
+                            <Button name="LegacyUI_LegacyItem18" inherits="LegacyItemTokenTemplate" id="18">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem17" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem19" inherits="LegacyItemTemplate" id="19">
+                            <Button name="LegacyUI_LegacyItem19" inherits="LegacyItemTokenTemplate" id="19">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem18" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem20" inherits="LegacyItemTemplate" id="20">
+                            <Button name="LegacyUI_LegacyItem20" inherits="LegacyItemTokenTemplate" id="20">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem19" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem21" inherits="LegacyItemTemplate" id="21">
+                            <Button name="LegacyUI_LegacyItem21" inherits="LegacyItemTokenTemplate" id="21">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem20" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem22" inherits="LegacyItemTemplate" id="22">
+                            <Button name="LegacyUI_LegacyItem22" inherits="LegacyItemTokenTemplate" id="22">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem21" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem23" inherits="LegacyItemTemplate" id="23">
+                            <Button name="LegacyUI_LegacyItem23" inherits="LegacyItemTokenTemplate" id="23">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem22" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem24" inherits="LegacyItemTemplate" id="24">
+                            <Button name="LegacyUI_LegacyItem24" inherits="LegacyItemTokenTemplate" id="24">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem12" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem25" inherits="LegacyItemTemplate" id="25">
+                            <Button name="LegacyUI_LegacyItem25" inherits="LegacyItemTokenTemplate" id="25">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem24" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem26" inherits="LegacyItemTemplate" id="26">
+                            <Button name="LegacyUI_LegacyItem26" inherits="LegacyItemTokenTemplate" id="26">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem25" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem27" inherits="LegacyItemTemplate" id="27">
+                            <Button name="LegacyUI_LegacyItem27" inherits="LegacyItemTokenTemplate" id="27">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem26" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem28" inherits="LegacyItemTemplate" id="28">
+                            <Button name="LegacyUI_LegacyItem28" inherits="LegacyItemTokenTemplate" id="28">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem27" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem29" inherits="LegacyItemTemplate" id="29">
+                            <Button name="LegacyUI_LegacyItem29" inherits="LegacyItemTokenTemplate" id="29">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem28" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem30" inherits="LegacyItemTemplate" id="30">
+                            <Button name="LegacyUI_LegacyItem30" inherits="LegacyItemTokenTemplate" id="30">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem29" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem31" inherits="LegacyItemTemplate" id="31">
+                            <Button name="LegacyUI_LegacyItem31" inherits="LegacyItemTokenTemplate" id="31">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem30" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem32" inherits="LegacyItemTemplate" id="32">
+                            <Button name="LegacyUI_LegacyItem32" inherits="LegacyItemTokenTemplate" id="32">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem31" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_LegacyItem33" inherits="LegacyItemTemplate" id="33">
+                            <Button name="LegacyUI_LegacyItem33" inherits="LegacyItemTokenTemplate" id="33">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem32" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_LegacyItem34" inherits="LegacyItemTemplate" id="34">
+							<Button name="LegacyUI_LegacyItem34" inherits="LegacyItemTokenTemplate" id="34">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem33" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_LegacyItem35" inherits="LegacyItemTemplate" id="35">
+							<Button name="LegacyUI_LegacyItem35" inherits="LegacyItemTokenTemplate" id="35">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem34" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_LegacyItem36" inherits="LegacyItemTemplate" id="36">
+							<Button name="LegacyUI_LegacyItem36" inherits="LegacyItemTokenTemplate" id="36">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem35" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_LegacyItemNavLeft" inherits="LegacyItemNavButtonTemplate" id="1">
+							<Button name="LegacyUI_LegacyItemNavLeft" inherits="LegacyItemNavTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_LegacyItemNavRight" inherits="LegacyItemNavButtonTemplate" id="2">
+							<Button name="LegacyUI_LegacyItemNavRight" inherits="LegacyItemNavTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_LegacyItem11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
@@ -1064,7 +1363,7 @@
                     </Frame>
                 </Frames>
             </Frame>
-			<Frame name="$parent_Page5" hidden="true">
+			<Frame name="LegacyUI_Page5" hidden="true">
                 <Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -1084,282 +1383,282 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_MarketItem1" inherits="MarketItemTemplate" id="1">
+                            <Button name="LegacyUI_MarketItem1" inherits="LegacyMarketTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem2" inherits="MarketItemTemplate" id="2">
+                            <Button name="LegacyUI_MarketItem2" inherits="LegacyMarketTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem3" inherits="MarketItemTemplate" id="3">
+                            <Button name="LegacyUI_MarketItem3" inherits="LegacyMarketTokenTemplate" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem4" inherits="MarketItemTemplate" id="4">
+                            <Button name="LegacyUI_MarketItem4" inherits="LegacyMarketTokenTemplate" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem5" inherits="MarketItemTemplate" id="5">
+                            <Button name="LegacyUI_MarketItem5" inherits="LegacyMarketTokenTemplate" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem6" inherits="MarketItemTemplate" id="6">
+                            <Button name="LegacyUI_MarketItem6" inherits="LegacyMarketTokenTemplate" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem7" inherits="MarketItemTemplate" id="7">
+                            <Button name="LegacyUI_MarketItem7" inherits="LegacyMarketTokenTemplate" id="7">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem8" inherits="MarketItemTemplate" id="8">
+                            <Button name="LegacyUI_MarketItem8" inherits="LegacyMarketTokenTemplate" id="8">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem9" inherits="MarketItemTemplate" id="9">
+                            <Button name="LegacyUI_MarketItem9" inherits="LegacyMarketTokenTemplate" id="9">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem10" inherits="MarketItemTemplate" id="10">
+                            <Button name="LegacyUI_MarketItem10" inherits="LegacyMarketTokenTemplate" id="10">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem11" inherits="MarketItemTemplate" id="11">
+                            <Button name="LegacyUI_MarketItem11" inherits="LegacyMarketTokenTemplate" id="11">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem12" inherits="MarketItemTemplate" id="12">
+                            <Button name="LegacyUI_MarketBuff1" inherits="LegacyMarketTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem1" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem13" inherits="MarketItemTemplate" id="13">
+                            <Button name="LegacyUI_MarketBuff2" inherits="LegacyMarketTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem14" inherits="MarketItemTemplate" id="14">
+                            <Button name="LegacyUI_MarketBuff3" inherits="LegacyMarketTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem13" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem15" inherits="MarketItemTemplate" id="15">
+                            <Button name="LegacyUI_MarketBuff4" inherits="LegacyMarketTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem14" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem16" inherits="MarketItemTemplate" id="16">
+                            <Button name="LegacyUI_MarketBuff5" inherits="LegacyMarketTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem15" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem17" inherits="MarketItemTemplate" id="17">
+                            <Button name="LegacyUI_MarketBuff6" inherits="LegacyMarketTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem16" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem18" inherits="MarketItemTemplate" id="18">
+                            <Button name="LegacyUI_MarketBuff7" inherits="LegacyMarketTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem17" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem19" inherits="MarketItemTemplate" id="19">
+                            <Button name="LegacyUI_MarketBuff8" inherits="LegacyMarketTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem18" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem20" inherits="MarketItemTemplate" id="20">
+                            <Button name="LegacyUI_MarketBuff9" inherits="LegacyMarketTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem19" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem21" inherits="MarketItemTemplate" id="21">
+                            <Button name="LegacyUI_MarketBuff10" inherits="LegacyMarketTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem20" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem22" inherits="MarketItemTemplate" id="22">
+                            <Button name="LegacyUI_MarketBuff11" inherits="LegacyMarketTokenTemplate" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem21" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem23" inherits="MarketItemTemplate" id="23">
+                            <Button name="LegacyUI_MarketBuff12" inherits="LegacyMarketTokenTemplate" id="12">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem22" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem24" inherits="MarketItemTemplate" id="24">
+                            <Button name="LegacyUI_MarketSpell1" inherits="LegacyMarketTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff1" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem25" inherits="MarketItemTemplate" id="25">
+                            <Button name="LegacyUI_MarketSpell2" inherits="LegacyMarketTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem24" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem26" inherits="MarketItemTemplate" id="26">
+                            <Button name="LegacyUI_MarketSpell3" inherits="LegacyMarketTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem25" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem27" inherits="MarketItemTemplate" id="27">
+                            <Button name="LegacyUI_MarketSpell4" inherits="LegacyMarketTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem26" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem28" inherits="MarketItemTemplate" id="28">
+                            <Button name="LegacyUI_MarketSpell5" inherits="LegacyMarketTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem27" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem29" inherits="MarketItemTemplate" id="29">
+                            <Button name="LegacyUI_MarketSpell6" inherits="LegacyMarketTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem28" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem30" inherits="MarketItemTemplate" id="30">
+                            <Button name="LegacyUI_MarketSpell7" inherits="LegacyMarketTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem29" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem31" inherits="MarketItemTemplate" id="31">
+                            <Button name="LegacyUI_MarketSpell8" inherits="LegacyMarketTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem30" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem32" inherits="MarketItemTemplate" id="32">
+                            <Button name="LegacyUI_MarketSpell9" inherits="LegacyMarketTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem31" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_MarketItem33" inherits="MarketItemTemplate" id="33">
+                            <Button name="LegacyUI_MarketSpell10" inherits="LegacyMarketTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem32" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_MarketItem34" inherits="MarketItemTemplate" id="34">
+							<Button name="LegacyUI_MarketSpell11" inherits="LegacyMarketTokenTemplate" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem33" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_MarketItem35" inherits="MarketItemTemplate" id="35">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem24" relativePoint="CENTER">
-                                        <Offset x="44" y="77"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_MarketItem36" inherits="MarketItemTemplate" id="36">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem35" relativePoint="CENTER">
-                                        <Offset x="89" y="0"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_MarketItemNavLeft" inherits="MarketItemNavButtonTemplate" id="1">
+							<Button name="LegacyUI_MarketItemNavLeft" inherits="LegacyMarketNavTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_MarketItemNavRight" inherits="MarketItemNavButtonTemplate" id="2">
+							<Button name="LegacyUI_MarketItemNavRight" inherits="LegacyMarketNavTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_MarketSpellNavLeft" inherits="MarketItemNavButtonTemplate" id="3">
+							<Button name="LegacyUI_MarketBuffNavLeft" inherits="LegacyMarketNavTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem24" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_MarketSpellNavRight" inherits="MarketItemNavButtonTemplate" id="4">
+							<Button name="LegacyUI_MarketBuffNavRight" inherits="LegacyMarketNavTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketItem34" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketBuff12" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_MarketSpellNavLeft" inherits="LegacyMarketNavTokenTemplate" id="1">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell1" relativePoint="CENTER">
+                                        <Offset x="-89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_MarketSpellNavRight" inherits="LegacyMarketNavTokenTemplate" id="2">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_MarketSpell11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
@@ -1368,7 +1667,7 @@
                     </Frame>
                 </Frames>
             </Frame>
-            <Frame name="$parent_Page6" hidden="true">
+            <Frame name="LegacyUI_Page6" hidden="true">
 				<Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -1388,296 +1687,275 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_RewardItem1" inherits="RewardItemTemplate" id="1">
+                            <Button name="LegacyUI_ReputationReward1" inherits="LegacyReputationTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem2" inherits="RewardItemTemplate" id="2">
+                            <Button name="LegacyUI_ReputationReward2" inherits="LegacyReputationTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem3" inherits="RewardItemTemplate" id="3">
+                            <Button name="LegacyUI_ReputationReward3" inherits="LegacyReputationTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem4" inherits="RewardItemTemplate" id="4">
+                            <Button name="LegacyUI_ReputationReward4" inherits="LegacyReputationTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem5" inherits="RewardItemTemplate" id="5">
+                            <Button name="LegacyUI_ReputationReward5" inherits="LegacyReputationTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem6" inherits="RewardItemTemplate" id="6">
+                            <Button name="LegacyUI_ReputationReward6" inherits="LegacyReputationTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem7" inherits="RewardItemTemplate" id="7">
+                            <Button name="LegacyUI_ReputationReward7" inherits="LegacyReputationTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem8" inherits="RewardItemTemplate" id="8">
+                            <Button name="LegacyUI_ReputationReward8" inherits="LegacyReputationTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem9" inherits="RewardItemTemplate" id="9">
+                            <Button name="LegacyUI_ReputationReward9" inherits="LegacyReputationTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem10" inherits="RewardItemTemplate" id="10">
+                            <Button name="LegacyUI_ReputationReward10" inherits="LegacyReputationTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem11" inherits="RewardItemTemplate" id="11">
+                            <Button name="LegacyUI_ReputationReward11" inherits="LegacyReputationTokenTemplate" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem10" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem12" inherits="RewardItemTemplate" id="12">
+                            <Button name="LegacyUI_ReputationItem1" inherits="LegacyReputationTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward1" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem13" inherits="RewardItemTemplate" id="13">
+                            <Button name="LegacyUI_ReputationItem2" inherits="LegacyReputationTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem14" inherits="RewardItemTemplate" id="14">
+                            <Button name="LegacyUI_ReputationItem3" inherits="LegacyReputationTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem13" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem15" inherits="RewardItemTemplate" id="15">
+                            <Button name="LegacyUI_ReputationItem4" inherits="LegacyReputationTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem14" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem16" inherits="RewardItemTemplate" id="16">
+                            <Button name="LegacyUI_ReputationItem5" inherits="LegacyReputationTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem15" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem17" inherits="RewardItemTemplate" id="17">
+                            <Button name="LegacyUI_ReputationItem6" inherits="LegacyReputationTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem16" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem18" inherits="RewardItemTemplate" id="18">
+                            <Button name="LegacyUI_ReputationItem7" inherits="LegacyReputationTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem17" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem19" inherits="RewardItemTemplate" id="19">
+                            <Button name="LegacyUI_ReputationItem8" inherits="LegacyReputationTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem18" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem20" inherits="RewardItemTemplate" id="20">
+                            <Button name="LegacyUI_ReputationItem9" inherits="LegacyReputationTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem19" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem21" inherits="RewardItemTemplate" id="21">
+                            <Button name="LegacyUI_ReputationItem10" inherits="LegacyReputationTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem20" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem22" inherits="RewardItemTemplate" id="22">
+                            <Button name="LegacyUI_ReputationItem11" inherits="LegacyReputationTokenTemplate" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem10" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_ReputationSpell1" inherits="LegacyReputationTokenTemplate" id="1">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem1" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem23" inherits="RewardItemTemplate" id="23">
+                            <Button name="LegacyUI_ReputationSpell2" inherits="LegacyReputationTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem22" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem24" inherits="RewardItemTemplate" id="24">
+                            <Button name="LegacyUI_ReputationSpell3" inherits="LegacyReputationTokenTemplate" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem23" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem25" inherits="RewardItemTemplate" id="25">
+                            <Button name="LegacyUI_ReputationSpell4" inherits="LegacyReputationTokenTemplate" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem24" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem26" inherits="RewardItemTemplate" id="26">
+                            <Button name="LegacyUI_ReputationSpell5" inherits="LegacyReputationTokenTemplate" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem25" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem27" inherits="RewardItemTemplate" id="27">
+                            <Button name="LegacyUI_ReputationSpell6" inherits="LegacyReputationTokenTemplate" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem26" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem28" inherits="RewardItemTemplate" id="28">
+                            <Button name="LegacyUI_ReputationSpell7" inherits="LegacyReputationTokenTemplate" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem27" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem29" inherits="RewardItemTemplate" id="29">
+                            <Button name="LegacyUI_ReputationSpell8" inherits="LegacyReputationTokenTemplate" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem28" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem30" inherits="RewardItemTemplate" id="30">
+                            <Button name="LegacyUI_ReputationSpell9" inherits="LegacyReputationTokenTemplate" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem29" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem31" inherits="RewardItemTemplate" id="31">
+                            <Button name="LegacyUI_ReputationSpell10" inherits="LegacyReputationTokenTemplate" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem30" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem32" inherits="RewardItemTemplate" id="32">
+                            <Button name="LegacyUI_ReputationSpell11" inherits="LegacyReputationTokenTemplate" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem31" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_RewardItem33" inherits="RewardItemTemplate" id="33" hidden="true">
+							<Button name="LegacyUI_ReputationRewardNavLeft" inherits="LegacyReputationNavTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem32" relativePoint="CENTER">
-                                        <Offset x="44" y="77"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_RewardItem34" inherits="RewardItemTemplate" id="34" hidden="true">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem33" relativePoint="CENTER">
-                                        <Offset x="89" y="0"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_RewardItem35" inherits="RewardItemTemplate" id="35" hidden="true">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem34" relativePoint="CENTER">
-                                        <Offset x="89" y="0"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_RewardItem36" inherits="RewardItemTemplate" id="36" hidden="true">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem35" relativePoint="CENTER">
-                                        <Offset x="89" y="0"/>
-                                    </Anchor>
-                                </Anchors>
-                            </Button>
-							<Button name="LegacyUI_RewardItemNavLeft" inherits="RewardItemNavButtonTemplate" id="1">
-                                <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_RewardItemNavRight" inherits="RewardItemNavButtonTemplate" id="2">
+							<Button name="LegacyUI_ReputationRewardNavRight" inherits="LegacyReputationNavTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem11" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationReward11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ReputationItemNavLeft" inherits="RewardItemNavButtonTemplate" id="3">
+							<Button name="LegacyUI_ReputationItemNavLeft" inherits="LegacyReputationNavTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ReputationItemNavRight" inherits="RewardItemNavButtonTemplate" id="4">
+							<Button name="LegacyUI_ReputationItemNavRight" inherits="LegacyReputationNavTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem21" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationItem11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ReputationSpellNavLeft" inherits="RewardItemNavButtonTemplate" id="5">
+							<Button name="LegacyUI_ReputationSpellNavLeft" inherits="LegacyReputationNavTokenTemplate" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem22" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ReputationSpellNavRight" inherits="RewardItemNavButtonTemplate" id="6">
+							<Button name="LegacyUI_ReputationSpellNavRight" inherits="LegacyReputationNavTokenTemplate" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_RewardItem32" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_ReputationSpell11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
@@ -1686,7 +1964,7 @@
                     </Frame>
                 </Frames>
             </Frame>
-			<Frame name="$parent_Page7" hidden="true">
+			<Frame name="LegacyUI_Page7" hidden="true">
 				<Size>
                     <AbsDimension x="1024" y="1024"/>
                 </Size>
@@ -1706,252 +1984,252 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_ActivationKey1" inherits="ActivationKeyTemplate" id="1">
+                            <Button name="LegacyUI_ActivationKey1" inherits="LegacyActivationKeyTokenTemplate" id="1">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey2" inherits="ActivationKeyTemplate" id="2">
+                            <Button name="LegacyUI_ActivationKey2" inherits="LegacyActivationKeyTokenTemplate" id="2">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey3" inherits="ActivationKeyTemplate" id="3">
+                            <Button name="LegacyUI_ActivationKey3" inherits="LegacyActivationKeyTokenTemplate" id="3">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey4" inherits="ActivationKeyTemplate" id="4">
+                            <Button name="LegacyUI_ActivationKey4" inherits="LegacyActivationKeyTokenTemplate" id="4">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey5" inherits="ActivationKeyTemplate" id="5">
+                            <Button name="LegacyUI_ActivationKey5" inherits="LegacyActivationKeyTokenTemplate" id="5">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey6" inherits="ActivationKeyTemplate" id="6">
+                            <Button name="LegacyUI_ActivationKey6" inherits="LegacyActivationKeyTokenTemplate" id="6">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey7" inherits="ActivationKeyTemplate" id="7">
+                            <Button name="LegacyUI_ActivationKey7" inherits="LegacyActivationKeyTokenTemplate" id="7">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey8" inherits="ActivationKeyTemplate" id="8">
+                            <Button name="LegacyUI_ActivationKey8" inherits="LegacyActivationKeyTokenTemplate" id="8">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey9" inherits="ActivationKeyTemplate" id="9">
+                            <Button name="LegacyUI_ActivationKey9" inherits="LegacyActivationKeyTokenTemplate" id="9">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey10" inherits="ActivationKeyTemplate" id="10">
+                            <Button name="LegacyUI_ActivationKey10" inherits="LegacyActivationKeyTokenTemplate" id="10">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey11" inherits="ActivationKeyTemplate" id="11">
+                            <Button name="LegacyUI_ActivationKey11" inherits="LegacyActivationKeyTokenTemplate" id="11">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey12" inherits="ActivationKeyTemplate" id="12">
+                            <Button name="LegacyUI_ActivationKey12" inherits="LegacyActivationKeyTokenTemplate" id="12">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey1" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey13" inherits="ActivationKeyTemplate" id="13">
+                            <Button name="LegacyUI_ActivationKey13" inherits="LegacyActivationKeyTokenTemplate" id="13">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey12" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey14" inherits="ActivationKeyTemplate" id="14">
+                            <Button name="LegacyUI_ActivationKey14" inherits="LegacyActivationKeyTokenTemplate" id="14">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey13" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey15" inherits="ActivationKeyTemplate" id="15">
+                            <Button name="LegacyUI_ActivationKey15" inherits="LegacyActivationKeyTokenTemplate" id="15">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey14" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey16" inherits="ActivationKeyTemplate" id="16">
+                            <Button name="LegacyUI_ActivationKey16" inherits="LegacyActivationKeyTokenTemplate" id="16">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey15" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey17" inherits="ActivationKeyTemplate" id="17">
+                            <Button name="LegacyUI_ActivationKey17" inherits="LegacyActivationKeyTokenTemplate" id="17">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey16" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey18" inherits="ActivationKeyTemplate" id="18">
+                            <Button name="LegacyUI_ActivationKey18" inherits="LegacyActivationKeyTokenTemplate" id="18">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey17" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey19" inherits="ActivationKeyTemplate" id="19">
+                            <Button name="LegacyUI_ActivationKey19" inherits="LegacyActivationKeyTokenTemplate" id="19">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey18" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey20" inherits="ActivationKeyTemplate" id="20">
+                            <Button name="LegacyUI_ActivationKey20" inherits="LegacyActivationKeyTokenTemplate" id="20">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey19" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey21" inherits="ActivationKeyTemplate" id="21">
+                            <Button name="LegacyUI_ActivationKey21" inherits="LegacyActivationKeyTokenTemplate" id="21">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey20" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey22" inherits="ActivationKeyTemplate" id="22">
+                            <Button name="LegacyUI_ActivationKey22" inherits="LegacyActivationKeyTokenTemplate" id="22">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey12" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey23" inherits="ActivationKeyTemplate" id="23">
+                            <Button name="LegacyUI_ActivationKey23" inherits="LegacyActivationKeyTokenTemplate" id="23">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey22" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey24" inherits="ActivationKeyTemplate" id="24">
+                            <Button name="LegacyUI_ActivationKey24" inherits="LegacyActivationKeyTokenTemplate" id="24">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey23" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey25" inherits="ActivationKeyTemplate" id="25">
+                            <Button name="LegacyUI_ActivationKey25" inherits="LegacyActivationKeyTokenTemplate" id="25">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey24" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey26" inherits="ActivationKeyTemplate" id="26">
+                            <Button name="LegacyUI_ActivationKey26" inherits="LegacyActivationKeyTokenTemplate" id="26">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey25" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey27" inherits="ActivationKeyTemplate" id="27">
+                            <Button name="LegacyUI_ActivationKey27" inherits="LegacyActivationKeyTokenTemplate" id="27">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey26" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey28" inherits="ActivationKeyTemplate" id="28">
+                            <Button name="LegacyUI_ActivationKey28" inherits="LegacyActivationKeyTokenTemplate" id="28">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey27" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey29" inherits="ActivationKeyTemplate" id="29">
+                            <Button name="LegacyUI_ActivationKey29" inherits="LegacyActivationKeyTokenTemplate" id="29">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey28" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey30" inherits="ActivationKeyTemplate" id="30">
+                            <Button name="LegacyUI_ActivationKey30" inherits="LegacyActivationKeyTokenTemplate" id="30">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey29" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey31" inherits="ActivationKeyTemplate" id="31">
+                            <Button name="LegacyUI_ActivationKey31" inherits="LegacyActivationKeyTokenTemplate" id="31">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey30" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey32" inherits="ActivationKeyTemplate" id="32">
+                            <Button name="LegacyUI_ActivationKey32" inherits="LegacyActivationKeyTokenTemplate" id="32">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey31" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_ActivationKey33" inherits="ActivationKeyTemplate" id="33" hidden="true">
+                            <Button name="LegacyUI_ActivationKey33" inherits="LegacyActivationKeyTokenTemplate" id="33" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey32" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ActivationKey34" inherits="ActivationKeyTemplate" id="34" hidden="true">
+							<Button name="LegacyUI_ActivationKey34" inherits="LegacyActivationKeyTokenTemplate" id="34" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey33" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ActivationKey35" inherits="ActivationKeyTemplate" id="35" hidden="true">
+							<Button name="LegacyUI_ActivationKey35" inherits="LegacyActivationKeyTokenTemplate" id="35" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey34" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_ActivationKey36" inherits="ActivationKeyTemplate" id="36" hidden="true">
+							<Button name="LegacyUI_ActivationKey36" inherits="LegacyActivationKeyTokenTemplate" id="36" hidden="true">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="LegacyUI_ActivationKey35" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
@@ -1964,7 +2242,9 @@
             </Frame>
 		</Frames>
     </Frame>
-	<Frame name="LegacyUI_ReplacableGuildBonusFrame" parent="UIParent" hidden="true">
+	<Frame name="LegacyUI_GuildBonusSelectionFrame" parent="UIParent" hidden="true">
+	</Frame>
+    <Frame name="LegacyUI_SpellModFrame" parent="UIParent" hidden="true">
         <Size>
             <AbsDimension x="512" y="512"/>
         </Size>
@@ -1974,556 +2254,63 @@
             </Anchor>
         </Anchors>
         <Frames>
-            <Button name="$parentAbility1" inherits="LegacyGuildBonusReplaceItem" id="1">
+            <Button name="$parentItem1" inherits="LegacySpellModTokenTemplate" id="1">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                         <Offset x="0" y="0"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentAbility2" inherits="LegacyGuildBonusReplaceItem" id="2">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility3" inherits="LegacyGuildBonusReplaceItem" id="3">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility4" inherits="LegacyGuildBonusReplaceItem" id="4">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility2" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility5" inherits="LegacyGuildBonusReplaceItem" id="5">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility3" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility6" inherits="LegacyGuildBonusReplaceItem" id="6">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility4" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility7" inherits="LegacyGuildBonusReplaceItem" id="7">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility5" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-        </Frames>
-    </Frame>
-    <Frame name="LegacyUI_ReplacableAbilityFrame" parent="UIParent" hidden="true">
-        <Size>
-            <AbsDimension x="512" y="512"/>
-        </Size>
-        <Anchors>
-            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent">
-                <Offset x="0" y="0"/>
-            </Anchor>
-        </Anchors>
-        <Frames>
-            <Button name="$parentAbility1" inherits="LegacyReplacableAbilityItemTemplate" id="1">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
-                        <Offset x="0" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility2" inherits="LegacyReplacableAbilityItemTemplate" id="2">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility3" inherits="LegacyReplacableAbilityItemTemplate" id="3">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility4" inherits="LegacyReplacableAbilityItemTemplate" id="4">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility5" inherits="LegacyReplacableAbilityItemTemplate" id="5">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility6" inherits="LegacyReplacableAbilityItemTemplate" id="6">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility7" inherits="LegacyReplacableAbilityItemTemplate" id="7">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility1" relativePoint="CENTER">
-                        <Offset x="44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility8" inherits="LegacyReplacableAbilityItemTemplate" id="8">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility7" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility9" inherits="LegacyReplacableAbilityItemTemplate" id="9">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility2" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility10" inherits="LegacyReplacableAbilityItemTemplate" id="10">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility3" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility11" inherits="LegacyReplacableAbilityItemTemplate" id="11">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility3" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility12" inherits="LegacyReplacableAbilityItemTemplate" id="12">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility3" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility13" inherits="LegacyReplacableAbilityItemTemplate" id="13">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility4" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility14" inherits="LegacyReplacableAbilityItemTemplate" id="14">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility4" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility15" inherits="LegacyReplacableAbilityItemTemplate" id="15">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility5" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility16" inherits="LegacyReplacableAbilityItemTemplate" id="16">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility6" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility17" inherits="LegacyReplacableAbilityItemTemplate" id="17">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility6" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility18" inherits="LegacyReplacableAbilityItemTemplate" id="18">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility6" relativePoint="CENTER">
-                        <Offset x="44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentAbility19" inherits="LegacyReplacableAbilityItemTemplate" id="19">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility7" relativePoint="CENTER">
-                        <Offset x="44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility20" inherits="LegacyReplacableAbilityItemTemplate" id="20">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility7" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility21" inherits="LegacyReplacableAbilityItemTemplate" id="21">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility8" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility22" inherits="LegacyReplacableAbilityItemTemplate" id="22">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility9" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility23" inherits="LegacyReplacableAbilityItemTemplate" id="23">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility10" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility24" inherits="LegacyReplacableAbilityItemTemplate" id="24">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility10" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility25" inherits="LegacyReplacableAbilityItemTemplate" id="25">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility10" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility26" inherits="LegacyReplacableAbilityItemTemplate" id="26">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility11" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility27" inherits="LegacyReplacableAbilityItemTemplate" id="27">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility12" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility28" inherits="LegacyReplacableAbilityItemTemplate" id="28">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility12" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility29" inherits="LegacyReplacableAbilityItemTemplate" id="29">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility13" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility30" inherits="LegacyReplacableAbilityItemTemplate" id="30">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility14" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility31" inherits="LegacyReplacableAbilityItemTemplate" id="31">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility15" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility32" inherits="LegacyReplacableAbilityItemTemplate" id="32">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility16" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility33" inherits="LegacyReplacableAbilityItemTemplate" id="33">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility16" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility34" inherits="LegacyReplacableAbilityItemTemplate" id="34">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility17" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility35" inherits="LegacyReplacableAbilityItemTemplate" id="35">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility18" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility36" inherits="LegacyReplacableAbilityItemTemplate" id="36">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility19" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility37" inherits="LegacyReplacableAbilityItemTemplate" id="37">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility19" relativePoint="CENTER">
-                        <Offset x="44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility38" inherits="LegacyReplacableAbilityItemTemplate" id="38">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility19" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility39" inherits="LegacyReplacableAbilityItemTemplate" id="39">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility20" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility40" inherits="LegacyReplacableAbilityItemTemplate" id="40">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility21" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility41" inherits="LegacyReplacableAbilityItemTemplate" id="41">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility22" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility42" inherits="LegacyReplacableAbilityItemTemplate" id="42">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility23" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility43" inherits="LegacyReplacableAbilityItemTemplate" id="43">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility24" relativePoint="CENTER">
-                        <Offset x="89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility44" inherits="LegacyReplacableAbilityItemTemplate" id="44">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility24" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility45" inherits="LegacyReplacableAbilityItemTemplate" id="45">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility25" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility46" inherits="LegacyReplacableAbilityItemTemplate" id="46">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility26" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility47" inherits="LegacyReplacableAbilityItemTemplate" id="47">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility27" relativePoint="CENTER">
-                        <Offset x="44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility48" inherits="LegacyReplacableAbilityItemTemplate" id="48">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility27" relativePoint="CENTER">
-                        <Offset x="-44" y="77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility49" inherits="LegacyReplacableAbilityItemTemplate" id="49">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility27" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility50" inherits="LegacyReplacableAbilityItemTemplate" id="50">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility28" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility51" inherits="LegacyReplacableAbilityItemTemplate" id="51">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility29" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility52" inherits="LegacyReplacableAbilityItemTemplate" id="52">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility30" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility53" inherits="LegacyReplacableAbilityItemTemplate" id="53">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility31" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility54" inherits="LegacyReplacableAbilityItemTemplate" id="54">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility32" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility55" inherits="LegacyReplacableAbilityItemTemplate" id="55">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility33" relativePoint="CENTER">
-                        <Offset x="-89" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility56" inherits="LegacyReplacableAbilityItemTemplate" id="56">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility33" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility57" inherits="LegacyReplacableAbilityItemTemplate" id="57">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility34" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility58" inherits="LegacyReplacableAbilityItemTemplate" id="58">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility35" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility59" inherits="LegacyReplacableAbilityItemTemplate" id="59">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility36" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-			<Button name="$parentAbility60" inherits="LegacyReplacableAbilityItemTemplate" id="60">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parentAbility37" relativePoint="CENTER">
-                        <Offset x="-44" y="-77"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-        </Frames>
-    </Frame>
-    <Frame name="LegacyUI_AbilityUpgradeFrame" parent="UIParent" hidden="true">
-        <Size>
-            <AbsDimension x="512" y="512"/>
-        </Size>
-        <Anchors>
-            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent">
-                <Offset x="0" y="0"/>
-            </Anchor>
-        </Anchors>
-        <Frames>
-            <Button name="$parentItem1" inherits="LegacyAbilityUpgradeItemTemplate" id="1">
-                <Anchors>
-                    <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
-                        <Offset x="0" y="0"/>
-                    </Anchor>
-                </Anchors>
-            </Button>
-            <Button name="$parentItem2" inherits="LegacyAbilityUpgradeItemTemplate" id="2">
+            <Button name="$parentItem2" inherits="LegacySpellModTokenTemplate" id="2">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="89" y="0"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem3" inherits="LegacyAbilityUpgradeItemTemplate" id="3">
+            <Button name="$parentItem3" inherits="LegacySpellModTokenTemplate" id="3">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="44" y="77"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem4" inherits="LegacyAbilityUpgradeItemTemplate" id="4">
+            <Button name="$parentItem4" inherits="LegacySpellModTokenTemplate" id="4">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="-44" y="77"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem5" inherits="LegacyAbilityUpgradeItemTemplate" id="5">
+            <Button name="$parentItem5" inherits="LegacySpellModTokenTemplate" id="5">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="-89" y="0"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem6" inherits="LegacyAbilityUpgradeItemTemplate" id="6">
+            <Button name="$parentItem6" inherits="LegacySpellModTokenTemplate" id="6">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="-44" y="-77"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem7" inherits="LegacyAbilityUpgradeItemTemplate" id="7">
+            <Button name="$parentItem7" inherits="LegacySpellModTokenTemplate" id="7">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem1" relativePoint="CENTER">
                         <Offset x="44" y="-77"/>
                     </Anchor>
                 </Anchors>
             </Button>
-            <Button name="$parentItem8" inherits="LegacyAbilityUpgradeItemTemplate" id="8">
+            <Button name="$parentItem8" inherits="LegacySpellModTokenTemplate" id="8">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem7" relativePoint="CENTER">
                         <Offset x="89" y="0"/>
                     </Anchor>
                 </Anchors>
             </Button>
-			<Button name="$parentItem9" inherits="LegacyAbilityUpgradeItemTemplate" id="9">
+			<Button name="$parentItem9" inherits="LegacySpellModTokenTemplate" id="9">
                 <Anchors>
                     <Anchor point="CENTER" relativeTo="$parentItem2" relativePoint="CENTER">
                         <Offset x="89" y="0"/>
@@ -2532,7 +2319,21 @@
             </Button>
         </Frames>
     </Frame>
-    <Frame name="LegacyFrame" parent="UIParent">
+	<Frame name="LegacyTip" parent="UIParent">
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="LegacyTipTitle" inherits="SystemFont_Shadow_Huge1" text="LEGACY_TEMP">
+					<Size x="400" y="60"/>
+					<Anchors>
+						<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+							<Offset x="0" y="0"/>
+						</Anchor>
+					</Anchors>
+				</FontString>
+			</Layer>
+        </Layers>
+	</Frame>
+	<Frame name="LegacyFrame" parent="UIParent">
         <Size>
             <AbsDimension x="1024" y="1024"/>
         </Size>
@@ -2575,18 +2376,4 @@
             <OnHide function="LegacyPanel_OnHide"/>
         </Scripts>
     </Frame>
-	<Frame name="LegacyTip" parent="UIParent">
-		<Layers>
-			<Layer level="OVERLAY">
-				<FontString name="LegacyTipTitle" inherits="SystemFont_Shadow_Huge1" text="LEGACY_TEMP">
-					<Size x="400" y="60"/>
-					<Anchors>
-						<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
-							<Offset x="0" y="0"/>
-						</Anchor>
-					</Anchors>
-				</FontString>
-			</Layer>
-        </Layers>
-	</Frame>
 </Ui>

@@ -1,0 +1,483 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:schemaLocation="http://www.blizzard.com/wow/ui/ G:\Legacy\Client\Interface\FrameXML\UI.xsd">
+    <Button name="LegacyTokenTemplate" virtual="true">
+        <Size>
+            <AbsDimension x="100" y="100"/>
+        </Size>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <Texture name="$parentIcon" file="Interface\ICONS\INV_MISC_QUESTIONMARK">
+                    <Size x="60" y="60"/>
+                    <Anchors>
+                        <Anchor point="CENTER">
+                            <Offset x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords left="0.1" right="0.9" top="0.1" bottom="0.9"/>
+                </Texture>
+            </Layer>
+            <Layer level="BORDER">
+                <Texture name="$parentBorder" file="Interface\Addons\LegacyPanel\Asset\Image\AbilityBorderHex">
+                    <Size x="100" y="100"/>
+                    <Anchors>
+                        <Anchor point="CENTER">
+                            <Offset x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords left="0" right="1" top="0" bottom="1"/>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <Texture name="$parentHighlight" file="Interface\Addons\LegacyPanel\Asset\Image\AbilityBorderHexHighlight" hidden="true">
+                    <Size x="100" y="100"/>
+                    <Anchors>
+                        <Anchor point="CENTER">
+                            <Offset x="0" y="0"/>
+                        </Anchor>
+                    </Anchors>
+                    <TexCoords left="0" right="1" top="0" bottom="1"/>
+                    <Color r="1" g="1" b="0" a="0.5"/>
+                </Texture>
+            </Layer>
+            <Layer level="OVERLAY">
+                <FontString name="$parentTitle" inherits="GameFontNormal" text="LEGACY_TEMP">
+                    <Size x="64" y="32"/>
+                    <Anchors>
+                        <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+                            <Offset x="0" y="10"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="$parentDesc" inherits="GameFontHighlightSmall" text="LEGACY_TEMP">
+                    <Size x="64" y="32"/>
+                    <Anchors>
+                        <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+                            <Offset x="0" y="-10"/>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+    </Button>
+	<Button name="LegacyHomeNavTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadHomeNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterHomeNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveHomeNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickHomeNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyStatTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadStatToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterStatToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveStatToken(self, motion);
+            </OnLeave>
+			<OnClick>
+				LegacyPanel_OnClickStatToken(self, button, down);
+			</OnClick>
+        </Scripts>
+    </Button>
+    <Button name="LegacySpecialtyTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadSpecialtyToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterSpecialtyToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveSpecialtyToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickSpecialtyToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyRuneTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+		<Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadRuneToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterRuneToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveRuneToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickRuneToken(self, button, down);
+            </OnClick>
+        </Scripts>
+	</Button>
+    <Button name="LegacySpellModTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadSpellModToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterSpellModToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveSpellModToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickSpellModToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyItemTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadLegacyItemToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterLegacyItemToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveLegacyItemToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickLegacyItemToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyMarketTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadMarketToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterMarketToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveMarketToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickMarketToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyActivationKeyTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadActivationKeyToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterActivationKeyToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveActivationKeyToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickActivationKeyToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyItemNavTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadLegacyItemNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterLegacyItemNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveLegacyItemNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickLegacyItemNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyMarketNavTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadMarketNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterMarketNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveMarketNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickMarketNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyReputationTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadReputationToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterReputationToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveReputationToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickReputationToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyReputationNavTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadReputationNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterReputationNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveReputationNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickReputationNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+    <Button name="LegacyGuildRankTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadGuildRankToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterGuildRankToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveGuildRankToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickGuildRankToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyGuildRankProgressTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadGuildRankProgressToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterGuildRankProgressToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveGuildRankProgressToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickGuildRankProgressToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyGuildBonusTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadGuildBonusToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterGuildBonusToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveGuildBonusToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickGuildBonusToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyGuildBonusSelectionTokenTemplate" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadGuildBonusSelectionToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterGuildBonusSelectionToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveGuildBonusSelectionToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickGuildBonusSelectionToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyTransmogSlotToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadTransmogSlotToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterTransmogSlotToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveTransmogSlotToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickTransmogSlotToken(self, button, down);
+            </OnClick>
+			<OnUpdate>
+				LegacyPanel_OnUpdateTransmogSlotToken(self, elapsed);
+			</OnUpdate>
+        </Scripts>
+    </Button>
+	<Button name="LegacyTransmogToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadTransmogToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterTransmogToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveTransmogToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickTransmogToken(self, button, down);
+            </OnClick>
+			<OnUpdate>
+				LegacyPanel_OnUpdateTransmogToken(self, elapsed);
+			</OnUpdate>
+        </Scripts>
+    </Button>
+	<Button name="LegacyTransmogNavToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadTransmogNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterTransmogNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveTransmogNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickTransmogNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassSkillToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSkillToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSkillToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSkillToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSkillToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassSkillNavToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSkillNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSkillNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSkillNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSkillNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassMemoryToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassMemoryToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassMemoryToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassMemoryToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassMemoryToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassMemoryNavToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassMemoryNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassMemoryNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassMemoryNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassMemoryNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassSpellToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSpellToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSpellToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSpellToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSpellToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassSpellNavToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSpellNavToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSpellNavToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSpellNavToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSpellNavToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyClassSwitchToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSwitchToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSwitchToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSwitchToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSwitchToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+</Ui>
