@@ -480,4 +480,20 @@
             </OnClick>
         </Scripts>
     </Button>
+	<Button name="LegacyClassSkillStatToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadClassSkillStatToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterClassSkillStatToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveClassSkillStatToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickClassSkillStatToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
 </Ui>

@@ -28,13 +28,23 @@ function LegacyPanel_OnLeaveSpellModToken(self)
 end
 
 function LegacyPanel_FormatSpellModTooltip(self)
-	GameTooltip:Hide();
-	GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -30, -30);
-	GameTooltip:ClearLines();
-	local leftTitle = "|cff00ff00"..Legacy_FormatSpellModDesc(self.data.desc, self.data.value).."|r";
-	local rightTitle = "0/"..self.data.mrank;
-	GameTooltip:AddDoubleLine(leftTitle, rightTitle);
-	GameTooltip:Show();
+	if (self == GameTooltip:GetOwner()) then
+		GameTooltip:ClearLines();
+		local rank = Legacy.Data.Character.Spell.Mod[self.data.id];
+		if (rank == nil) then rank = 0; end
+		local desc = Legacy_FormatSpellModDesc(self.data.desc, self.data.value * rank);
+		if (rank < self.data.mrank) then
+			GameTooltip:AddDoubleLine(desc, Legacy_RDots(rank, self.data.mrank), 1, 1, 1, 1, 1, 1);
+		else
+			GameTooltip:AddDoubleLine(desc, Legacy_RDots(rank, self.data.mrank), 1, 1, 0, 1, 1, 0);
+		end
+		if (rank < self.data.mrank) then
+			GameTooltip:AddDoubleLine(LEGACY_SPELLMOD_NEXT_RANK, Legacy_FormatSpellModDesc(self.data.desc, self.data.value * rank + 1), 0, 1, 0, 0, 1, 0);
+			GameTooltip:AddDoubleLine(LEGACY_SPELLMOD_RIGHT_CLICK_HINT, format(LEGACY_SPELLMOD_COST, self.data.costb + self.data.costi * rank), 0, 1, 0, 0, 1, 0);
+		else
+			GameTooltip:AddLine(LEGACY_SPELLMOD_MAX_RANK_EXCEEDED, 1, 1, 0);
+		end
+	end
 end
 
 function LegacyPanel_OnClickSpellModToken(self, button)
@@ -44,26 +54,32 @@ function LegacyPanel_OnClickSpellModToken(self, button)
             return;
         end
     else
-        if (self.Id == 1) then
+        if (self.Id == 1 or self.data == nil) then
             return;
         else
-            -- learn mod
+            local rank = Legacy.Data.Character.Spell.Mod[self.data.id];
+			if (rank == nil) then rank = 0; end
+			if (rank < self.data.mrank) then
+				Legacy_DoQuery(LMSG_A_LEARN_SPELLMOD, self.data.id);
+			end
         end
     end
 end
 
-function LegacyPanel_LoadSpellModToFrame(spell)
-    local spItem = Legacy.UI.SpellMod[1];
-    spItem.spell = spell;
-    spItem.Icon:SetTexture(Legacy_GetSpellIcon(spell));
-	spItem.Icon:SetDesaturated(false);
-    spItem.Title:Hide();
-    spItem.Desc:Hide();
-    LegacyPanel_UpdateSpellMods(spell);
+function LegacyPanel_LoadSpellModToFrame()
+	if (Legacy.Var.Nav.Selected.SpellMod ~= 0) then
+		local spItem = Legacy.UI.SpellMod[1];
+		spItem.spell = Legacy.Var.Nav.Selected.SpellMod;
+		spItem.Icon:SetTexture(Legacy_GetSpellIcon(Legacy.Var.Nav.Selected.SpellMod));
+		spItem.Icon:SetDesaturated(false);
+		spItem.Title:Hide();
+		spItem.Desc:Hide();
+		LegacyPanel_UpdateSpellMods();
+	end
 end
 
-function LegacyPanel_UpdateSpellMods(spell)
-    local spMods = ClassSpellMod[spell];
+function LegacyPanel_UpdateSpellMods()
+    local spMods = ClassSpellMod[Legacy.Var.Nav.Selected.SpellMod];
     if (spMods ~= nil) then
 		local index = 2;
 		for k, v in pairs(spMods) do
@@ -71,9 +87,12 @@ function LegacyPanel_UpdateSpellMods(spell)
 			token.spell = spell;
 			token.mod = k;
 			token.data = v;
-			token.Desc:SetText("0/"..v.mrank);
+			local rank = Legacy.Data.Character.Spell.Mod[v.id];
+			if (rank == nil) then rank = 0; end
+			token.Desc:SetText(rank.."/"..v.mrank);
 			token.Icon:SetTexture(LEGACY_ABILITY_SPELLMOD_ICON[v.icon]);
 			token:Show();
+			LegacyPanel_FormatSpellModTooltip(token);
 			index = index + 1;
 		end
 		

@@ -22,7 +22,7 @@ function Legacy_GetSpellName(entry)
 end
 
 function Legacy_SpellMemorized(spell)
-	return false;
+	return Legacy.Data.Character.Spell.Memorized[spell] == true;
 end
 
 function Legacy_GetSpellIcon(spell)
@@ -50,4 +50,13 @@ function LegacyPanel_SelectDefaultClassSkill()
 	end
 	
 	LegacyPanel_SelectClassSkill(skill);
+end
+
+function Legacy_SpellActivated(spell)
+	for k, v in pairs(Legacy.Data.Character.Spell.Activated) do
+		if (v == spell) then
+			return true;
+		end
+	end
+	return false;
 end

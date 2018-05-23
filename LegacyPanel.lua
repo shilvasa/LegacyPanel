@@ -48,8 +48,7 @@ function LegacyPanel_OnEvent(self, event, ...)
 		local prefix, msg, channel, target = ...;
 		LegacyPanel_ProcessAddonMessage(prefix, msg);
 	elseif (event == "PLAYER_LEVEL_UP") then
-        local level, _, _, _, _, _, _, _, _ = ...;
-        LegacyPanel_UpdateSpells(level);
+        --
 	elseif (event == "GET_ITEM_INFO_RECEIVED") then
 		--print("received something new.");
     end

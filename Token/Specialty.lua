@@ -1,9 +1,9 @@
 function LegacyPanel_OnLoadStatToken(self)
     LegacyPanel_InitToken(self);
-    self.Title:SetText(0);
-	self.Title:SetVertexColor(0, 1, 0, 1);
+    self.Title:SetText("WP");
+	self.Title:SetVertexColor(1, 1, 1, 1);
     self.Desc:SetText(0);
-	self.Desc:SetVertexColor(1, 1, 1, 1);
+	self.Desc:SetVertexColor(0, 1, 0, 1);
     self.Icon:SetTexture("Interface\\Icons\\ACHIEVEMENT_BG_DG_MASTER_OF_THE_DEEPWIND_GORGE");
 end
 
@@ -32,6 +32,8 @@ end
 
 function LegacyPanel_OnLoadSpecialtyToken(self)
     LegacyPanel_InitToken(self);
+	self.Title:SetVertexColor(1, 1, 0, 1);
+	self.Desc:SetVertexColor(1, 1, 1, 1);
     self.Title:SetText(LEGACY_SPECIALTY_DESC[self.Id].Title);
     self.Icon:SetTexture(LEGACY_SPECIALTY_DESC[self.Id].Icon);
     self.Desc:SetText(0);
@@ -68,8 +70,7 @@ function LegacyPanel_OnClickSpecialtyToken(self, button)
 end
 
 function LegacyPanel_UpdateSpecialty()
-	Legacy.UI.Specialty.Stat.Title:SetText(Legacy.Data.Character.Specialty.Available);
-	Legacy.UI.Specialty.Stat.Desc:SetText(Legacy.Data.Character.Specialty.Point);
+	Legacy.UI.Specialty.Stat.Desc:SetText(Legacy.Data.Character.Specialty.Available);
 	Legacy.UI.Specialty.Armforce.Desc:SetText(Legacy.Data.Character.Specialty.Stat[LEGACY_SPECIALTY_ARMFORCE]);
 	LegacyPanel_ReformatSpecialtyTip(Legacy.UI.Specialty.Armforce);
 	Legacy.UI.Specialty.Instinct.Desc:SetText(Legacy.Data.Character.Specialty.Stat[LEGACY_SPECIALTY_INSTINCT]);

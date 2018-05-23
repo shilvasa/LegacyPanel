@@ -171,3 +171,47 @@ function Legacy_GetSpecialtyResetCost()
 	p = p + Legacy.Data.Character.Specialty.Stat[LEGACY_SPECIALTY_TRIAL];
 	return p*p;
 end
+
+function Legacy_RDots(v, m)
+	local c = m - v;
+	local str = "";
+	for i = 1, v do
+		str = str.."●";
+	end
+	for i = 1, c do
+		str = str.."○";
+	end
+	return str;
+end
+
+function Legacy_CompletedStr(c)
+	if (c) then return LEGACY_COMPLETED; else return LEGACY_INCOMPLETED; end
+end
+
+LEGACY_ROMAN_NUMBER = 
+{
+	[1] = "I",
+	[2] = "II",
+	[3] = "III",
+	[4] = "IV",
+	[5] = "V",
+	[6] = "VI",
+	[7] = "VII",
+	[8] = "VIII",
+	[9] = "IX",
+	[10] = "X",
+	[11] = "XI",
+	[12] = "XII",
+	[13] = "XIII",
+	[14] = "XIV",
+	[15] = "XV",
+	[16] = "XVI",
+	[17] = "XVII",
+	[18] = "XVIII",
+	[19] = "XIX",
+	[20] = "XX",
+}
+
+function Legacy_RomanN(n)
+	return LEGACY_ROMAN_NUMBER[n];
+end

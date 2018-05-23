@@ -22,8 +22,61 @@ function LegacyPanel_OnEnterClassSkillToken(self, motion)
 			else
 				GameTooltip:AddDoubleLine(self.data.Name, LEGACY_ORIGIN_MASTERY, r, g, b, r, g, b);
 			end
+			local left, right = " ";
+			left = LEGACY_SKILL_MASTERY_LEFT_CLICK_HINT;
 			if (self.rankData ~= nil) then
 				GameTooltip:AddDoubleLine(LEGACY_SKILL_MASTERY_RANK, format("%d/%d", self.rankData.Rank, self.rankData.Cap), 1, 1, 1, 1, 1, 1);
+				if (self.rankData.Rank < self.rankData.Cap) then
+					right = format(LEGACY_SKILL_MASTERY_RIGHT_CLICK_HINT, 1);
+				end
+			end
+			GameTooltip:AddDoubleLine(left, right, 0, 1, 0, 0, 1, 0);
+			
+			local bonus = {
+				[2] = Legacy.Data.Env.ClassSkillBonus[self.entry][2],
+				[3] = Legacy.Data.Env.ClassSkillBonus[self.entry][3],
+				[4] = Legacy.Data.Env.ClassSkillBonus[self.entry][4],
+				[5] = Legacy.Data.Env.ClassSkillBonus[self.entry][5],
+			};
+			if (bonus[2] ~= nil and bonus[2] ~= 0) then
+				GameTooltip:AddLine(" ");
+				local color = { [0] = 0, [1] = 1, [2] = 0 };
+				local id2, name2, point2, completed2, _, _, _, desc2 = GetAchievementInfo(bonus[2]);
+				if (not completed2) then
+					color[0] = 0.5; color[1] = 0.5; color[2] = 0.5;
+				end
+				GameTooltip:AddDoubleLine(LEGACY_CLASS_SKILL_BONUS_RANK.."2: "..name2, Legacy_CompletedStr(completed2), color[0], color[1], color[2], color[0], color[1], color[2]);
+				GameTooltip:AddLine(" - "..desc2, color[0], color[1], color[2]);
+				
+				if (bonus[3] ~= nil and bonus[3] ~= 0) then
+					local id3, name3, point3, completed3, _, _, _, desc3 = GetAchievementInfo(bonus[3]);
+					local unlocked3 = completed2 and completed3;
+					if (not unlocked3) then
+						color[0] = 0.5; color[1] = 0.5; color[2] = 0.5;
+					end
+					GameTooltip:AddDoubleLine(LEGACY_CLASS_SKILL_BONUS_RANK.."3: "..name3, Legacy_CompletedStr(completed3), color[0], color[1], color[2], color[0], color[1], color[2]);
+					GameTooltip:AddLine(" - "..desc3, color[0], color[1], color[2]);
+					
+					if (bonus[4] ~= nil and bonus[4] ~= 0) then
+						local id4, name4, point4, completed4, _, _, _, desc4 = GetAchievementInfo(bonus[4]);
+						local unlocked4 = unlocked3 and completed4;
+						if (not unlocked4) then
+							color[0] = 0.5; color[1] = 0.5; color[2] = 0.5;
+						end
+						GameTooltip:AddDoubleLine(LEGACY_CLASS_SKILL_BONUS_RANK.."4: "..name4, Legacy_CompletedStr(completed4), color[0], color[1], color[2], color[0], color[1], color[2]);
+						GameTooltip:AddLine(" - "..desc4, color[0], color[1], color[2]);
+						
+						if (bonus[5] ~= nil and bonus[5] ~= 0) then
+							local id5, name5, point5, completed5, _, _, _, desc5 = GetAchievementInfo(bonus[5]);
+							local unlocked5 = unlocked4 and completed5;
+							if (not unlocked5) then
+								color[0] = 0.5; color[1] = 0.5; color[2] = 0.5;
+							end
+							GameTooltip:AddDoubleLine(LEGACY_CLASS_SKILL_BONUS_RANK.."5: "..name5, Legacy_CompletedStr(completed5), color[0], color[1], color[2], color[0], color[1], color[2]);
+							GameTooltip:AddLine(" - "..desc5, color[0], color[1], color[2]);
+						end
+					end
+				end
 			end
 			GameTooltip:Show();
 		end
@@ -40,6 +93,11 @@ end
 function LegacyPanel_OnClickClassSkillToken(self, button, down)
 	if (button == "LeftButton") then
 		LegacyPanel_SelectClassSkill(self.entry);
+	else
+		if (Legacy.Data.Character.ClassSkill.Available > 0 and self.rankData.Rank < self.rankData.Cap) then
+			local popup = StaticPopup_Show("LEGACY_LEARN_CLASS_SKILL_CONFIRM", format(LEGACY_LEARN_CLASS_SKILL, LEGACY_SKILL_NAME[self.entry].Shade, LEGACY_SKILL_NAME[self.entry].Name, self.rankData.Rank, self.rankData.Rank + 1, 1));
+			popup.entry = self.entry;
+		end
 	end
 end
 
@@ -92,11 +150,7 @@ function LegacyPanel_UpdateClassSkill()
 			token.entry = index;
 			token:Show();
 			token.Icon:SetTexture(skill.Icon);
-			if (skill.Class == cl) then
-				token.Border:SetVertexColor(Legacy_GetClassShade(cl));
-			else
-				token.Border:SetVertexColor(1, 1, 1, 1);
-			end
+			token.Border:SetVertexColor(Legacy_GetColorHex(LEGACY_SKILL_NAME[index].Shade));
 			
 			if (token.entry == Legacy.Var.Nav.Selected.ClassSkill) then
 				token.Highlight:SetVertexColor(0, 1, 0, 1);
@@ -157,20 +211,17 @@ function LegacyPanel_OnEnterClassMemoryToken(self, motion)
 		_G[GameTooltip:GetName().."TextLeft1"]:SetVertexColor(r, g, b, 1);
 		if (self.entry ~= 0 and self.data.rank ~= 0) then
 			local p = _G[GameTooltip:GetName().."TextRight1"];
-			p:SetText(format("%s %d", LEGACY_SKILL_NAME[self.skill].Name, self.data.rank));
-			p:SetVertexColor(r, g, b, 1);
-			p:Show();
-		end
-		if (self.data.cost > 0) then
-			GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_COST, self.data.cost, 1, 1, 1, 1, 1, 1);
-		end
-		if (self.data.origin == 1) then
-			if (cl == LEGACY_SKILL_NAME[self.skill].Class) then
-				local color = LEGACY_CLASS_COLOR[cl];
-				GameTooltip:AddDoubleLine(LEGACY_ORIGIN_MASTERY, Legacy_GetClassName(LEGACY_SKILL_NAME[self.skill].Class), color.r, color.g, color.b, color.r, color.g, color.b);
-			else
-				GameTooltip:AddDoubleLine(LEGACY_ORIGIN_MASTERY, Legacy_GetClassName(LEGACY_SKILL_NAME[self.skill].Class), 1, 0, 0, 1, 0, 0);
+			local str = format("%s %d", LEGACY_SKILL_NAME[self.skill].Name, self.data.rank);
+			if (self.data.origin == 1) then
+				str = LEGACY_CLASS_SPELL_ORIGIN..str;
 			end
+			p:SetText(str);
+			if (self.data.origin == 1) then
+				p:SetVertexColor(Legacy_GetClassColor(LEGACY_SKILL_NAME[self.skill].Class));
+			else
+				p:SetVertexColor(r, g, b, 1);
+			end
+			p:Show();
 		end
 		
 		local left, right = " ";
@@ -178,7 +229,11 @@ function LegacyPanel_OnEnterClassMemoryToken(self, motion)
 			left = LEGACY_MEMORY_LEFT_CLICK_HINT;
 		end
 		if (Legacy_SpellMemorized(self.entry)) then
-			right = LEGACY_MEMORY_RIGHT_CLICK_HINT;
+			if (Legacy.Data.Character.Memory.Available < self.data.cost) then
+				right = format("|cffff0000"..LEGACY_MEMORY_RIGHT_CLICK_HINT.."|r", self.data.cost);
+			else
+				right = format("|cff00ff00"..LEGACY_MEMORY_RIGHT_CLICK_HINT.."|r", self.data.cost);
+			end
 		else
 			right = LEGACY_MEMORY_NOT_AVAILABLE;
 			left = " ";
@@ -198,9 +253,14 @@ function LegacyPanel_OnClickClassMemoryToken(self, button, down)
 	if (button == "LeftButton" and ClassSpellMod[self.entry] ~= nil and LEGACY_SKILL_NAME[self.skill].Class == cl) then
 		local x, y = self:GetCenter();
 		Legacy.UI.SpellModFrame:SetPoint("CENTER", Legacy.UI.SpellModFrame:GetParent(), "BOTTOMLEFT", x, y);
-		LegacyPanel_LoadSpellModToFrame(self.entry);
+		Legacy.Var.Nav.Selected.SpellMod = self.entry;
+		LegacyPanel_LoadSpellModToFrame();
 		LegacyPanel_Navigate(Legacy.UI.Home.Page[0], Legacy.UI.SpellModFrame);
 	else
+		if (Legacy_SpellMemorized(self.entry) and not Legacy_SpellActivated(self.entry) and Legacy.Data.Character.Memory.Point >= self.data.cost) then
+			local popup = StaticPopup_Show("LEGACY_ACTIVATE_CLASS_SPELL_CONFIRM", Legacy_GetSpellLink(self.entry), self.data.cost);
+			popup.entry = self.entry;
+		end
 	end
 end
 
@@ -217,11 +277,11 @@ function LegacyPanel_UpdateClassMemory()
 			token.Icon:SetTexture(Legacy_GetSpellIcon(data.spell));
 			token.Desc:SetText(data.cost);
 			token.Desc:Show();
-			if (LEGACY_SKILL_NAME[Legacy.Var.Nav.Selected.ClassSkill].Class == cl) then
-				token.Border:SetVertexColor(Legacy_GetClassShade(cl));
-			else
-				token.Border:SetVertexColor(1, 1, 1, 1);
-			end
+				if (data.origin == 1) then
+					token.Border:SetVertexColor(Legacy_GetClassColor(LEGACY_SKILL_NAME[token.skill].Class));
+				else
+					token.Border:SetVertexColor(Legacy_GetColorHex(LEGACY_SKILL_NAME[token.skill].Shade));
+				end
 			if (Legacy_SpellMemorized(data.spell)) then
 				token.Icon:SetDesaturated(false);
 			else
@@ -290,14 +350,16 @@ function LegacyPanel_OnLoadClassSpellToken(self)
 end
 
 function LegacyPanel_OnEnterClassSpellToken(self, motion)
+	local _, cl = UnitClass("player");
 	GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -30, -30);
 	if (self.entry ~= 0) then
 		GameTooltip:SetHyperlink("spell:"..self.entry);
+		self.Highlight:SetVertexColor(Legacy_GetClassShade(cl));
+		GameTooltip:AddDoubleLine(" ", LEGACY_REMOVE_ACTIVE_SPELL_RIGHT_CLICK_HINT, 1, 1, 1, 0, 1, 0);
 	else
 		if (self.unlocked) then
 			GameTooltip:AddLine(LEGACY_SPELL_SLOT_EMPTY, 0, 1, 0);
 			GameTooltip:AddLine(LEGACY_SPELL_SLOT_HINT, 1, 1, 1);
-			local _, cl = UnitClass("player");
 			self.Highlight:SetVertexColor(Legacy_GetClassShade(cl));
 		else
 			GameTooltip:AddLine(LEGACY_SPELL_SLOT_SEALED, 0.5, 0.5, 0.5);
@@ -314,6 +376,13 @@ function LegacyPanel_OnLeaveClassSpellToken(self, motion)
 end
 
 function LegacyPanel_OnClickClassSpellToken(self, button, down)
+	if (button == "RightButton") then
+		if (self.entry ~= 0) then
+			local data = ClassSpells
+			local popup = StaticPopup_Show("LEGACY_REMOVE_CLASS_SPELL_CONFIRM", Legacy_GetSpellLink(self.entry));
+			popup.entry = self.entry;
+		end
+	end
 end
 
 -- spell nav
@@ -356,6 +425,7 @@ function LegacyPanel_UpdateActivatedSpell()
 			token.entry = spell;
 			if (spell ~= 0) then
 				token.Icon:SetTexture(Legacy_GetSpellIcon(spell));
+				token.Icon:SetVertexColor(1, 1, 1, 1);
 			else
 				token.Icon:SetTexture(LEGACY_CLASS_ICON[0][cl]);
 				token.Icon:SetVertexColor(Legacy_GetClassShade(cl));
@@ -367,7 +437,7 @@ function LegacyPanel_UpdateActivatedSpell()
 			else
 				token.Icon:SetDesaturated(true);
 			end
-			token.Desc:SetText(slot);
+			token.Desc:SetText(Legacy_RomanN(slot));
 			token.Desc:Show();
 			token:Show();
 		else
@@ -411,6 +481,60 @@ end
 function LegacyPanel_OnClickClassSwitchToken(self, button, down)
 end
 
-function LegacyPanel_UpdateMemoryPoint()
-	Legacy.UI.Home.Nav[0].Desc:SetText(Legacy.Data.Character.Memory.Available);
+function LegacyPanel_UpdateNavSkillPoint()
+	Legacy.UI.Home.Nav[0].Desc:SetText(Legacy.Data.Character.ClassSkill.Point);
+end
+
+function LegacyPanel_OnLoadClassSkillStatToken(self)
+	LegacyPanel_InitToken(self);
+	self.Desc:SetText(0);
+	self.Title:SetVertexColor(1, 1, 1, 1);
+	self.Desc:SetVertexColor(0, 1, 0, 1);
+	if (self.Id == 3) then
+		self.Title:SetText("MP");
+		self.Icon:SetTexture("Interface\\Icons\\ACHIEVEMENT_DUNGEON_NEXUSRAID_HEROIC");
+	elseif (self.Id == 2) then
+		self.Title:SetText("TP");
+		self.Icon:SetTexture("Interface\\Icons\\ACHIEVEMENT_DUNGEON_NEXUS70_NORMAL");
+	elseif (self.Id == 1) then
+		self.Title:SetText("SP");
+		self.Icon:SetTexture("Interface\\Icons\\ACHIEVEMENT_DUNGEON_ULDUAR77_25MAN");
+	end
+end
+
+function LegacyPanel_OnEnterClassSkillStatToken(self, motion)
+	GameTooltip:SetOwner(self, "ANCHOR_RIGHT", -30, -30);
+	if (self.Id == 3) then
+		-- skill
+		GameTooltip:AddDoubleLine(LEGACY_SKILL_MASTERY_AVAILABLE, Legacy.Data.Character.ClassSkill.Available, 0, 1, 0, 0, 1, 0);
+		GameTooltip:AddDoubleLine(LEGACY_SKILL_MASTERY_TOTAL, Legacy.Data.Character.ClassSkill.Point, 1, 1, 1, 1, 1, 1);
+	elseif (self.Id == 2) then
+		-- memory
+		GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_AVAILABLE, Legacy.Data.Character.Memory.Available, 0, 1, 0, 0, 1, 0);
+		GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_TOTAL, Legacy.Data.Character.Memory.Point, 1, 1, 1, 1, 1, 1);
+		GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_COST_MOD, Legacy.Data.Character.Memory.Cost.Mod, 1, 1, 1, 1, 1, 1);
+		GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_COST_SLOT, Legacy.Data.Character.Memory.Cost.Slot, 1, 1, 1, 1, 1, 1);
+		GameTooltip:AddDoubleLine(LEGACY_MEMORY_POINT_COST_SPELL, Legacy.Data.Character.Memory.Cost.Spell, 1, 1, 1, 1, 1, 1);
+	elseif (self.Id == 1) then
+		-- spell
+	end
+	GameTooltip:Show();
+	self.Highlight:SetVertexColor(0, 1, 0, 1);
+	self.Highlight:Show();
+end
+
+function LegacyPanel_OnLeaveClassSkillStatToken(self, motion)
+	GameTooltip:Hide();
+	self.Highlight:Hide();
+end
+
+function LegacyPanel_OnClickClassSkillStatToken(self, button, down)
+end
+
+function LegacyPanel_UpdateClassSkillStat()
+	Legacy.UI.ClassSkill.Stat.Skill.Desc:SetText(Legacy.Data.Character.ClassSkill.Available);
+end
+
+function LegacyPanel_UpdateClassMemoryStat()
+	Legacy.UI.ClassSkill.Stat.Memory.Desc:SetText(Legacy.Data.Character.Memory.Available);
 end

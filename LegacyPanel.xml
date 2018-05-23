@@ -90,30 +90,30 @@
                     </Anchor>
                 </Anchors>
 				<Frames>
-					<Button name="LegacyUI_BuildSwitch1" inherits="LegacyClassSwitchToken" id="1">
+					<Button name="LegacyUI_ClassSpellStat" inherits="LegacyClassSkillStatToken" id="1">
 						<Anchors>
 							<Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
 								<Offset x="-551" y="-40"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_BuildSwitch2" inherits="LegacyClassSwitchToken" id="2">
+					<Button name="LegacyUI_ClassMemoryStat" inherits="LegacyClassSkillStatToken" id="2">
 						<Anchors>
-							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch1" relativePoint="CENTER">
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpellStat" relativePoint="CENTER">
 								<Offset x="-44" y="77"/>
 							</Anchor>
 						</Anchors>
 					</Button>
-					<Button name="LegacyUI_BuildSwitch3" inherits="LegacyClassSwitchToken" id="3">
+					<Button name="LegacyUI_ClassSkillStat" inherits="LegacyClassSkillStatToken" id="3">
 						<Anchors>
-							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch2" relativePoint="CENTER">
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemoryStat" relativePoint="CENTER">
 								<Offset x="44" y="77"/>
 							</Anchor>
 						</Anchors>
 					</Button>
 					<Button name="LegacyUI_ClassSpellNavPrev" inherits="LegacyClassSpellNavToken" id="1">
 						<Anchors>
-							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch1" relativePoint="CENTER">
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSpellStat" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
@@ -197,7 +197,7 @@
 					</Button>
 					<Button name="LegacyUI_ClassMemoryNavPrev" inherits="LegacyClassMemoryNavToken" id="1">
 						<Anchors>
-							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch2" relativePoint="CENTER">
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassMemoryStat" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>
@@ -288,7 +288,7 @@
 					</Button>
 					<Button name="LegacyUI_ClassSkillNavPrev" inherits="LegacyClassSkillNavToken" id="1">
 						<Anchors>
-							<Anchor point="CENTER" relativeTo="LegacyUI_BuildSwitch3" relativePoint="CENTER">
+							<Anchor point="CENTER" relativeTo="LegacyUI_ClassSkillStat" relativePoint="CENTER">
 								<Offset x="89" y="0"/>
 							</Anchor>
 						</Anchors>

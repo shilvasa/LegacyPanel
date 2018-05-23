@@ -245,7 +245,7 @@ LEGACY_STRING_FORMAT_RED = "|cffff0000%s|r";
 LEGACY_STRING_FORMAT_YELLOW = "|cffffff00%s|r";
 LEGACY_STRING_FORMAT_LIGHTBLUE = "|cff6666ff%s|r";
 LEGACY_GP_ITEM_HINT = "|cff00ff00右键: 重置|r";
-LEGACY_GP_AVAILABLE = "可用精通点数";
+LEGACY_GP_AVAILABLE = "可用战争点数";
 LEGACY_GP_TOTAL_GAINED = "获取点数总额";
 LEGACY_GP_TOTAL_COST = "花费点数总额";
 LEGACY_GP_COST_SPELL = "·技能学习";
@@ -258,7 +258,7 @@ LEGACY_SPECIALTY_DESC =
     [3] = { Title = "意志", Tip = "意志 |cffffffff%d|r", Bonus = "|cff00ff00+%.2f%%|r |cffffffff生命重生速率|r", Desc = "|cff00ff00+%.2f%%|r |cffffffff耐力属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff精神属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff力量属性增益|r|n|cffff0000-%.2f%%|r |cffffffff敏捷属性增益|r|n|cffff0000-%.2f%%|r |cffffffff智力属性增益|r", Icon = "Interface\\Icons\\ACHIEVEMENT_BG_KILLFLAGCARRIERS_GRABFLAG_CAPIT" },
     [4] = { Title = "心智", Tip = "心智 |cffffffff%d|r", Bonus = "|cff00ff00+%.2f%%|r |cffffffff法术爆击率|r", Desc = "|cff00ff00+%.2f%%|r |cffffffff智力属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff敏捷属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff精神属性增益|r|n|cffff0000-%.2f%%|r |cffffffff耐力属性增益|r|n|cffff0000-%.2f%%|r |cffffffff力量属性增益|r", Icon = "Interface\\Icons\\ABILITY_MAGE_GREATERINVISIBILITY" },
     [5] = { Title = "灵魂", Tip = "灵魂 |cffffffff%d|r", Bonus = "|cff00ff00+%.2f%%|r |cffffffff能量上限|r", Desc = "|cff00ff00+%.2f%%|r |cffffffff精神属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff智力属性增益|r|n|cff00ff00+%.2f%%|r |cffffffff耐力属性增益|r|n|cffff0000-%.2f%%|r |cffffffff力量属性增益|r|n|cffff0000-%.2f%%|r |cffffffff敏捷属性增益|r", Icon = "Interface\\Icons\\ABILITY_ROGUE_IMROVEDRECUPERATE" },
-    [6] = { Title = "阅历", Tip = "阅历 |cffffffff%d|r", Desc = "|cffffffff生产和鉴定物品时寻获魔法的几率和生成的魔法等级提高|r|cff00ff00%u|r", Icon = "Interface\\Icons\\ABILITY_SHAMAN_ANCESTRALGUIDANCE" },
+    [6] = { Title = "修行", Tip = "修行 |cffffffff%d|r", Desc = "|cffffffff生产和鉴定物品时寻获魔法的几率和生成的魔法等级提高|r|cff00ff00%u|r", Icon = "Interface\\Icons\\ABILITY_SHAMAN_ANCESTRALGUIDANCE" },
 };
 LEGACY_SPECIALTY_DESC_PSYCHE = "|cff00ff00+%.2f%%|r |cffffffff魔法精准率|r";
 LEGACY_GUILD_RANK =
@@ -677,9 +677,19 @@ LEGACY_BUILD_NAME =
 LEGACY_ORIGIN_MASTERY = "源始精通";
 LEGACY_SKILL_MASTERY_RANK = "精通";
 LEGACY_MEMORY_POINT_COST = "记忆点数";
+LEGACY_SKILL_MASTERY_AVAILABLE = "可用精通点数";
+LEGACY_SKILL_MASTERY_TOTAL = "获取的精通点数";
+LEGACY_MEMORY_POINT_AVAILABLE = "可用修研点数";
+LEGACY_MEMORY_POINT_TOTAL = "获取的修研点数";
+LEGACY_MEMORY_POINT_COST_MOD = "技能强化消耗";
+LEGACY_MEMORY_POINT_COST_SLOT = "技能栏位消耗";
+LEGACY_MEMORY_POINT_COST_SPELL = "技能链接消耗";
+LEGACY_SKILL_MASTERY_LEFT_CLICK_HINT = "左键: 选择";
+LEGACY_SKILL_MASTERY_RIGHT_CLICK_HINT = "右键: 提升(%dMP)";
+LEGACY_CLASS_SKILL_BONUS = "精通上限加成: ";
 
-LEGACY_MEMORY_LEFT_CLICK_HINT = "|cff00ff00左键: 强化|r";
-LEGACY_MEMORY_RIGHT_CLICK_HINT = "|cff00ff00右键：激活|r";
+LEGACY_MEMORY_LEFT_CLICK_HINT = "|cff00ff00左键: 技能强化|r";
+LEGACY_MEMORY_RIGHT_CLICK_HINT = "右键: 激活技能(%dTP)";
 LEGACY_MEMORY_NOT_AVAILABLE = "|cff999999未记忆|r";
 LEGACY_RUNE_NAME_T0 = "生命符文";
 LEGACY_RUNE_NAME_T1 = "元素符文";
@@ -687,3 +697,18 @@ LEGACY_RUNE_NAME_T2 = "灵魂符文";
 LEGACY_SPELL_SLOT_EMPTY = "技能槽(空)";
 LEGACY_SPELL_SLOT_HINT = "激活已记忆的法术来获取更多技能";
 LEGACY_SPELL_SLOT_SEALED = "技能槽(封印)";
+
+LEGACY_SPELLMOD_NEXT_RANK = "下一等级: ";
+LEGACY_SPELLMOD_COST = "花费: %dTP";
+LEGACY_SPELLMOD_RIGHT_CLICK_HINT = "右键: 强化";
+LEGACY_SPELLMOD_MAX_RANK_EXCEEDED = "已达到最高强化等级";
+
+LEGACY_ACTIVATE_CLASS_SPELL = "激活技能：%s|n花费: %dTP";
+LEGACY_REMOVE_ACTIVE_SPELL_RIGHT_CLICK_HINT = "右键: 移除技能";
+LEGACY_REMOVE_CLASS_SPELL = "移除技能: %s并返还修研点数消耗";
+
+LEGACY_LEARN_CLASS_SKILL = "|cff%s[%s]|r精通将由%d级提升至%d级|n花费: %dMP";
+LEGACY_CLASS_SKILL_BONUS_RANK = "精通";
+LEGACY_COMPLETED = "(已完成)";
+LEGACY_INCOMPLETED = "(未完成)";
+LEGACY_CLASS_SPELL_ORIGIN = "源始";

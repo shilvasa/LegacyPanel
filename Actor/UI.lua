@@ -39,6 +39,10 @@ function LegacyPanel_InitUI()
 	Legacy.UI.Specialty.Pysche = LegacyUI_Specialty5;
 	Legacy.UI.Specialty.Trial = LegacyUI_Specialty6;
 	
+	Legacy.UI.ClassSkill.Stat.Skill = LegacyUI_ClassSkillStat;
+	Legacy.UI.ClassSkill.Stat.Memory = LegacyUI_ClassMemoryStat;
+	Legacy.UI.ClassSkill.Stat.Spell = LegacyUI_ClassSpellStat;
+	
 	Legacy.UI.ClassSkill.Skill[1] = LegacyUI_ClassSkill1;
 	Legacy.UI.ClassSkill.Skill[2] = LegacyUI_ClassSkill2;
 	Legacy.UI.ClassSkill.Skill[3] = LegacyUI_ClassSkill3;

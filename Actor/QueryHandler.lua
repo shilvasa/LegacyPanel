@@ -12,15 +12,15 @@ function Legacy_HandleSpecialtyInfo(msg)
 	LegacyPanel_UpdateSpecialty();
 end
 
--- LMSG_Q_MEMORY_POINT
+-- LMSG_Q_CLASS_MEMORY_POINT
 function Legacy_HandleMemoryPointInfo(msg)
-	local point, available, costByMod, costBySlot = Legacy_Fetch(msg);
+	local point, available, costByMod, costBySlot, costBySpell = Legacy_Fetch(msg);
 	Legacy.Data.Character.Memory.Point = tonumber(point);
 	Legacy.Data.Character.Memory.Available = tonumber(available);
 	Legacy.Data.Character.Memory.Cost.Mod = tonumber(costByMod);
 	Legacy.Data.Character.Memory.Cost.Slot = tonumber(costBySlot);
-	
-	LegacyPanel_UpdateMemoryPoint();
+	Legacy.Data.Character.Memory.Cost.Spell = tonumber(costBySpell);
+	LegacyPanel_UpdateClassMemoryStat();
 end
 
 -- LMSG_Q_SPELLINFO (obs)
@@ -187,6 +187,7 @@ end
 
 -- LMSG_Q_GUILD_BONUS_INFO
 function Legacy_HandleGuildBonusInfo(msg)
+	Legacy.Data.Guild.Bonus = {};
 	local set = Legacy_SplitToSet(msg, ":");
 	for i = 1, #set, 4 do
 		local slot = tonumber(set[i]);
@@ -333,6 +334,12 @@ end
 
 -- LMSG_Q_MEMORIZED_SPELL
 function Legacy_HandleMemorizedSpellInfo(msg)
+	Legacy.Data.Character.Spell.Memorized = {};
+	local set = Legacy_SplitToSet(msg, ":");
+	for i = 1, #set, 1 do
+		Legacy.Data.Character.Spell.Memorized[tonumber(set[i])] = true;
+	end
+	LegacyPanel_UpdateClassMemory();
 end
 
 -- LMSG_Q_ACTIVATED_SPELL
@@ -368,5 +375,29 @@ function Legacy_HandleClassSpellModInfo(msg)
 		local mod = tonumber(set[i]);
 		local rank = tonumber(set[i + 1]);
 		Legacy.Data.Character.Spell.Mod[mod] = rank;
+	end
+	LegacyPanel_UpdateSpellMods();
+end
+
+-- LMSG_Q_CLASS_SKILL_POINT
+function Legacy_HandleClassSkillPoint(msg)
+	local sp, spc, spa = Legacy_Fetch(msg);
+	Legacy.Data.Character.ClassSkill.Point = tonumber(sp);
+	Legacy.Data.Character.ClassSkill.Available = tonumber(spa);
+	LegacyPanel_UpdateNavSkillPoint();
+	LegacyPanel_UpdateClassSkillStat();
+end
+
+-- LMSG_Q_CLASS_SKILL_BONUS
+function Legacy_HandleClassSkillBonus(msg)
+	local set = Legacy_SplitToSet(msg, ":");
+	local index = 1;
+	for i = 1, #set, 4 do
+		Legacy.Data.Env.ClassSkillBonus[index] = {};
+		Legacy.Data.Env.ClassSkillBonus[index][2] = tonumber(set[i]);
+		Legacy.Data.Env.ClassSkillBonus[index][3] = tonumber(set[i+1]);
+		Legacy.Data.Env.ClassSkillBonus[index][4] = tonumber(set[i+2]);
+		Legacy.Data.Env.ClassSkillBonus[index][5] = tonumber(set[i+3]);
+		index = index + 1;
 	end
 end

@@ -196,3 +196,44 @@ StaticPopupDialogs["LEGACY_FETCH_MARKET_BUFF_CONFIRM"] =
     hideOnEscape = 1,
 }
 
+StaticPopupDialogs["LEGACY_ACTIVATE_CLASS_SPELL_CONFIRM"] =
+{
+    text = LEGACY_ACTIVATE_CLASS_SPELL,
+    button1 = LEGACY_CONFIRM,
+    button2 = LEGACY_CANCEL,
+    OnAccept = function(self)
+        Legacy_DoQuery(LMSG_A_ACTIVATE_CLASS_SPELL, self.entry);
+    end,
+    OnCancel = function() end,
+    timeout = 0,
+    exclusive = 1,
+    hideOnEscape = 1,
+}
+
+StaticPopupDialogs["LEGACY_REMOVE_CLASS_SPELL_CONFIRM"] =
+{
+    text = LEGACY_REMOVE_CLASS_SPELL,
+    button1 = LEGACY_CONFIRM,
+    button2 = LEGACY_CANCEL,
+    OnAccept = function(self)
+        Legacy_DoQuery(LMSG_A_REMOVE_CLASS_SPELL, self.entry);
+    end,
+    OnCancel = function() end,
+    timeout = 0,
+    exclusive = 1,
+    hideOnEscape = 1,
+}
+
+StaticPopupDialogs["LEGACY_LEARN_CLASS_SKILL_CONFIRM"] =
+{
+    text = "%s",
+    button1 = LEGACY_CONFIRM,
+    button2 = LEGACY_CANCEL,
+    OnAccept = function(self)
+        Legacy_DoQuery(LMSG_A_LEARN_CLASS_SKILL, self.entry);
+    end,
+    OnCancel = function() end,
+    timeout = 0,
+    exclusive = 1,
+    hideOnEscape = 1,
+}

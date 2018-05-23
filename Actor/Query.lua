@@ -51,6 +51,10 @@ function Legacy_ParseQuery(action, msg)
 		Legacy_HandleClassSkillInfo(msg);
 	elseif (action == LMSG_Q_CLASS_SPELLMOD) then
 		Legacy_HandleClassSpellModInfo(msg);
+	elseif (action == LMSG_Q_CLASS_SKILL_POINT) then
+		Legacy_HandleClassSkillPoint(msg);
+	elseif (action == LMSG_Q_CLASS_SKILL_BONUS) then
+		Legacy_HandleClassSkillBonus(msg);
 	end
 end
 
@@ -77,6 +81,8 @@ function LegacyPanel_DoInitialQueries()
 	Legacy_DoQuery(LMSG_Q_ACTIVATED_SPELL);
 	Legacy_DoQuery(LMSG_Q_CLASS_SKILL);
 	Legacy_DoQuery(LMSG_Q_CLASS_SPELLMOD);
+	Legacy_DoQuery(LMSG_Q_CLASS_SKILL_POINT);
+	Legacy_DoQuery(LMSG_Q_CLASS_SKILL_BONUS);
 	if (IsInGuild()) then
 		Legacy_DoQuery(LMSG_Q_GUILD_RANK_INFO);
 		Legacy_DoQuery(LMSG_Q_GUILD_BONUS_INFO);
