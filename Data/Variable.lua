@@ -180,7 +180,7 @@ Legacy = {
 			ClassSkill = {
 				Point = 0,
 				Available = 0,
-				Rank = {},
+				Ranking = {},
 			},
 			Memory = {
 				Point = 0,

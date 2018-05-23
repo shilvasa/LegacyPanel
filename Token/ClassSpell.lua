@@ -143,7 +143,7 @@ function LegacyPanel_UpdateClassSkill()
 		local token = Legacy.UI.ClassSkill.Skill[i];
 		local index = i+LEGACY_MAX_SKILL_PER_PAGE*Legacy.Var.Nav.Page.ClassSkill.Skill;
 		local skill = LEGACY_SKILL_NAME[index];
-		local rankData = Legacy.Data.Character.ClassSkill[index];
+		local rankData = Legacy.Data.Character.ClassSkill.Ranking[index];
 		token.data = skill;
 		token.rankData = rankData;
 		if (skill ~= nil) then

@@ -355,13 +355,11 @@ end
 
 -- LMSG_Q_CLASS_SKILL
 function Legacy_HandleClassSkillInfo(msg)
-	Legacy.Data.Character.ClassSkill = {};
+	Legacy.Data.Character.ClassSkill.Ranking = {};
 	local set = Legacy_SplitToSet(msg, ":");
 	local index = 1;
 	for i = 1, #set, 2 do
-		Legacy.Data.Character.ClassSkill[index] = {};
-		Legacy.Data.Character.ClassSkill[index].Rank = tonumber(set[i]);
-		Legacy.Data.Character.ClassSkill[index].Cap = tonumber(set[i+1]);
+		Legacy.Data.Character.ClassSkill.Ranking[index] = { Rank = tonumber(set[i]), Cap = tonumber(set[i+1]) };
 		index = index + 1;
 	end
 	LegacyPanel_UpdateClassSkill();
