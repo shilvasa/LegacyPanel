@@ -70,6 +70,7 @@ function LegacyPanel_OnClickSpecialtyToken(self, button)
 end
 
 function LegacyPanel_UpdateSpecialty()
+	Legacy.UI.Home.Nav[LEGACY_PAGE_RUNE].Desc:SetText(Legacy.Data.Character.Specialty.Available);
 	Legacy.UI.Specialty.Stat.Desc:SetText(Legacy.Data.Character.Specialty.Available);
 	Legacy.UI.Specialty.Armforce.Desc:SetText(Legacy.Data.Character.Specialty.Stat[LEGACY_SPECIALTY_ARMFORCE]);
 	LegacyPanel_ReformatSpecialtyTip(Legacy.UI.Specialty.Armforce);

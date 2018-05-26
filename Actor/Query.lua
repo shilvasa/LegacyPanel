@@ -55,6 +55,16 @@ function Legacy_ParseQuery(action, msg)
 		Legacy_HandleClassSkillPoint(msg);
 	elseif (action == LMSG_Q_CLASS_SKILL_BONUS) then
 		Legacy_HandleClassSkillBonus(msg);
+	elseif (action == LMSG_Q_TRANSMOGS) then
+		Legacy_HandleTransmogInfo(msg);
+	elseif (action == LMSG_Q_TRANSMOG_COLLECTIONS) then
+		Legacy_HandleTransmogCollectionInfo(msg);
+	elseif (action == LMSG_Q_TRANSMOG_SLOTS) then
+		Legacy_HandleTransmogSlotInfo(msg);
+	elseif (action == LMSG_Q_SINGLE_TRANSMOG_SLOT) then
+		Legacy_HandleSingleTransmogSlotInfo(msg);
+	elseif (action == LMSG_Q_SINGLE_TRANSMOG) then
+		Legacy_HandleSingleTransmogInfo(msg);
 	end
 end
 
@@ -83,6 +93,9 @@ function LegacyPanel_DoInitialQueries()
 	Legacy_DoQuery(LMSG_Q_CLASS_SPELLMOD);
 	Legacy_DoQuery(LMSG_Q_CLASS_SKILL_POINT);
 	Legacy_DoQuery(LMSG_Q_CLASS_SKILL_BONUS);
+	Legacy_DoQuery(LMSG_Q_TRANSMOGS);
+	Legacy_DoQuery(LMSG_Q_TRANSMOG_COLLECTIONS);
+	Legacy_DoQuery(LMSG_Q_TRANSMOG_SLOTS);
 	if (IsInGuild()) then
 		Legacy_DoQuery(LMSG_Q_GUILD_RANK_INFO);
 		Legacy_DoQuery(LMSG_Q_GUILD_BONUS_INFO);

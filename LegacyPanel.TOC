@@ -8,6 +8,7 @@ Data\String.lua
 Data\ClassSpell.lua
 Data\Chrono.lua
 Data\Opcode.lua
+Data\Transmog.lua
 Data\UI\Popup.lua
 Actor\UI.lua
 Actor\Utility\Misc.lua

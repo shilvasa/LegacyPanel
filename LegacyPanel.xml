@@ -699,7 +699,7 @@
                     </Anchor>
                 </Anchors>
 				<Frames>
-					<Frame name="LegacyUI_Transmog">
+					<Frame name="LegacyUI_TransmogFrame">
                         <Size>
                             <AbsDimension x="1024" y="1024"/>
                         </Size>
@@ -709,100 +709,100 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_TransmogSlotItem1" inherits="LegacyTransmogSlotToken" id="0">
+                            <Button name="LegacyUI_Transmog1" inherits="LegacyTransmogToken" id="0">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="-462" y="-40"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem2" inherits="LegacyTransmogSlotToken" id="2">
+                            <Button name="LegacyUI_Transmog2" inherits="LegacyTransmogToken" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem3" inherits="LegacyTransmogSlotToken" id="3">
+                            <Button name="LegacyUI_Transmog3" inherits="LegacyTransmogToken" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem4" inherits="LegacyTransmogSlotToken" id="4">
+                            <Button name="LegacyUI_Transmog4" inherits="LegacyTransmogToken" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem5" inherits="LegacyTransmogSlotToken" id="5">
+                            <Button name="LegacyUI_Transmog5" inherits="LegacyTransmogToken" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem6" inherits="LegacyTransmogSlotToken" id="6">
+                            <Button name="LegacyUI_Transmog6" inherits="LegacyTransmogToken" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem7" inherits="LegacyTransmogSlotToken" id="7">
+                            <Button name="LegacyUI_Transmog7" inherits="LegacyTransmogToken" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem8" inherits="LegacyTransmogSlotToken" id="8">
+                            <Button name="LegacyUI_Transmog8" inherits="LegacyTransmogToken" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem9" inherits="LegacyTransmogSlotToken" id="9">
+                            <Button name="LegacyUI_Transmog9" inherits="LegacyTransmogToken" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem10" inherits="LegacyTransmogSlotToken" id="14">
+                            <Button name="LegacyUI_Transmog10" inherits="LegacyTransmogToken" id="14">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem11" inherits="LegacyTransmogSlotToken" id="15">
+                            <Button name="LegacyUI_Transmog11" inherits="LegacyTransmogToken" id="15">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog1" relativePoint="CENTER">
                                         <Offset x="44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogSlotItem12" inherits="LegacyTransmogSlotToken" id="16">
+                            <Button name="LegacyUI_Transmog12" inherits="LegacyTransmogToken" id="16">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem11" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogSlotItem13" inherits="LegacyTransmogSlotToken" id="17">
+							<Button name="LegacyUI_Transmog13" inherits="LegacyTransmogToken" id="17">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlotItem12" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_Transmog12" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
                         </Frames>
                     </Frame>
-					<Frame name="LegacyUI_TransmogItems" hidden="true">
+					<Frame name="LegacyUI_TransmogSlotFrame" hidden="true">
                         <Size>
                             <AbsDimension x="1024" y="1024"/>
                         </Size>
@@ -812,100 +812,350 @@
                             </Anchor>
                         </Anchors>
                         <Frames>
-                            <Button name="LegacyUI_TransmogItem0" inherits="LegacyTransmogToken" id="0">
+                            <Button name="LegacyUI_TransmogSlot0" inherits="LegacyTransmogSlotToken" id="0">
                                 <Anchors>
                                     <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
                                         <Offset x="0" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem1" inherits="LegacyTransmogToken" id="1">
+                            <Button name="LegacyUI_TransmogSlot1" inherits="LegacyTransmogSlotToken" id="1">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem0" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot0" relativePoint="CENTER">
                                         <Offset x="-44" y="77"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem2" inherits="LegacyTransmogToken" id="2">
+                            <Button name="LegacyUI_TransmogSlot2" inherits="LegacyTransmogSlotToken" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot1" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem3" inherits="LegacyTransmogToken" id="3">
+                            <Button name="LegacyUI_TransmogSlot3" inherits="LegacyTransmogSlotToken" id="3">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem2" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot2" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem4" inherits="LegacyTransmogToken" id="4">
+                            <Button name="LegacyUI_TransmogSlot4" inherits="LegacyTransmogSlotToken" id="4">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem3" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot3" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem5" inherits="LegacyTransmogToken" id="5">
+                            <Button name="LegacyUI_TransmogSlot5" inherits="LegacyTransmogSlotToken" id="5">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem4" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot4" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem6" inherits="LegacyTransmogToken" id="6">
+                            <Button name="LegacyUI_TransmogSlot6" inherits="LegacyTransmogSlotToken" id="6">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem5" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot5" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem7" inherits="LegacyTransmogToken" id="7">
+                            <Button name="LegacyUI_TransmogSlot7" inherits="LegacyTransmogSlotToken" id="7">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem6" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot6" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem8" inherits="LegacyTransmogToken" id="8">
+                            <Button name="LegacyUI_TransmogSlot8" inherits="LegacyTransmogSlotToken" id="8">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem7" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot7" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem9" inherits="LegacyTransmogToken" id="9">
+                            <Button name="LegacyUI_TransmogSlot9" inherits="LegacyTransmogSlotToken" id="9">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem8" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot8" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem10" inherits="LegacyTransmogToken" id="10">
+                            <Button name="LegacyUI_TransmogSlot10" inherits="LegacyTransmogSlotToken" id="10">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem9" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot9" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-                            <Button name="LegacyUI_TransmogItem11" inherits="LegacyTransmogToken" id="11">
+                            <Button name="LegacyUI_TransmogSlot11" inherits="LegacyTransmogSlotToken" id="11">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem10" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogSlot10" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogNavItem1" inherits="LegacyTransmogNavToken" id="1" hidden="true">
+                        </Frames>
+                    </Frame>
+					<Frame name="LegacyUI_TransmogCollFrame" hidden="true">
+                        <Size>
+                            <AbsDimension x="1024" y="1024"/>
+                        </Size>
+                        <Anchors>
+                            <Anchor point="CENTER" relativePoint="CENTER" relativeTo="$parent">
+                                <Offset x="0" y="0"/>
+                            </Anchor>
+                        </Anchors>
+                        <Frames>
+                            <Button name="LegacyUI_TransmogCollection0" inherits="LegacyTransmogCollectionToken" id="0">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem1" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+                                        <Offset x="-551" y="114"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection1" inherits="LegacyTransmogCollectionToken" id="1">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="$parent" relativePoint="CENTER">
+                                        <Offset x="-462" y="-40"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection2" inherits="LegacyTransmogCollectionToken" id="2">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection1" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection3" inherits="LegacyTransmogCollectionToken" id="3">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection2" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection4" inherits="LegacyTransmogCollectionToken" id="4">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection3" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection5" inherits="LegacyTransmogCollectionToken" id="5">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection4" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection6" inherits="LegacyTransmogCollectionToken" id="6">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection5" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection7" inherits="LegacyTransmogCollectionToken" id="7">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection6" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection8" inherits="LegacyTransmogCollectionToken" id="8">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection7" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection9" inherits="LegacyTransmogCollectionToken" id="9">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection8" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection10" inherits="LegacyTransmogCollectionToken" id="10">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection9" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+                            <Button name="LegacyUI_TransmogCollection11" inherits="LegacyTransmogCollectionToken" id="11">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection10" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection12" inherits="LegacyTransmogCollectionToken" id="12">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection1" relativePoint="CENTER">
+                                        <Offset x="44" y="77"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection13" inherits="LegacyTransmogCollectionToken" id="13">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection12" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection14" inherits="LegacyTransmogCollectionToken" id="14">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection13" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection15" inherits="LegacyTransmogCollectionToken" id="15">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection14" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection16" inherits="LegacyTransmogCollectionToken" id="16">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection15" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection17" inherits="LegacyTransmogCollectionToken" id="17">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection16" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection18" inherits="LegacyTransmogCollectionToken" id="18">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection17" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection19" inherits="LegacyTransmogCollectionToken" id="19">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection18" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection20" inherits="LegacyTransmogCollectionToken" id="20">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection19" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection21" inherits="LegacyTransmogCollectionToken" id="21">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection20" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection22" inherits="LegacyTransmogCollectionToken" id="22">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection21" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection23" inherits="LegacyTransmogCollectionToken" id="23">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection12" relativePoint="CENTER">
+                                        <Offset x="44" y="77"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection24" inherits="LegacyTransmogCollectionToken" id="24">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection23" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection25" inherits="LegacyTransmogCollectionToken" id="25">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection24" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection26" inherits="LegacyTransmogCollectionToken" id="26">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection25" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection27" inherits="LegacyTransmogCollectionToken" id="27">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection26" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection28" inherits="LegacyTransmogCollectionToken" id="28">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection27" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection29" inherits="LegacyTransmogCollectionToken" id="29">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection28" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection30" inherits="LegacyTransmogCollectionToken" id="30">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection29" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection31" inherits="LegacyTransmogCollectionToken" id="31">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection30" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection32" inherits="LegacyTransmogCollectionToken" id="32">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection31" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollection33" inherits="LegacyTransmogCollectionToken" id="33">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection32" relativePoint="CENTER">
+                                        <Offset x="89" y="0"/>
+                                    </Anchor>
+                                </Anchors>
+                            </Button>
+							<Button name="LegacyUI_TransmogCollectionNavLeft" inherits="LegacyTransmogCollectionNavToken" id="1">
+                                <Anchors>
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection1" relativePoint="CENTER">
                                         <Offset x="-89" y="0"/>
                                     </Anchor>
                                 </Anchors>
                             </Button>
-							<Button name="LegacyUI_TransmogNavItem2" inherits="LegacyTransmogNavToken" id="2" hidden="true">
+							<Button name="LegacyUI_TransmogCollectionNavRight" inherits="LegacyTransmogCollectionNavToken" id="2">
                                 <Anchors>
-                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogItem11" relativePoint="CENTER">
+                                    <Anchor point="CENTER" relativeTo="LegacyUI_TransmogCollection11" relativePoint="CENTER">
                                         <Offset x="89" y="0"/>
                                     </Anchor>
                                 </Anchors>

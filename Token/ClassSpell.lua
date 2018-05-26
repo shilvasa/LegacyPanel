@@ -532,6 +532,7 @@ function LegacyPanel_OnClickClassSkillStatToken(self, button, down)
 end
 
 function LegacyPanel_UpdateClassSkillStat()
+	Legacy.UI.Home.Nav[LEGACY_PAGE_CLASSSKILL].Desc:SetText(Legacy.Data.Character.ClassSkill.Available);
 	Legacy.UI.ClassSkill.Stat.Skill.Desc:SetText(Legacy.Data.Character.ClassSkill.Available);
 end
 

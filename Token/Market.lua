@@ -267,3 +267,7 @@ end
 
 function LegacyPanel_UpdateGoldRatio()
 end
+
+function LegacyPanel_UpdateCurrency()
+	Legacy.UI.Home.Nav[LEGACY_PAGE_MARKET].Desc:SetText(Legacy.Data.Account.Currency);
+end

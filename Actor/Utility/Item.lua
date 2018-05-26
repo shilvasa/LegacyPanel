@@ -10,3 +10,8 @@ function Legacy_AddEnchantToItemLink(oldLink, enchant)
 	end
 	return oldLink;
 end
+
+function Legacy_QueryItemInfo(item)
+	GameTooltip:SetOwner(WorldFrame, "ANCHOR_NONE");
+	GameTooltip:SetHyperlink("item:"..item);
+end

@@ -179,10 +179,12 @@ end
 
 -- LMSG_Q_ACCOUNT_INFO
 function Legacy_HandleAccountInfo(msg)
-	local curr, reputation, rank = Legacy_Fetch(msg);
+	local curr, rank, reputation = Legacy_Fetch(msg);
 	Legacy.Data.Account.Currency = tonumber(curr);
 	Legacy.Data.Account.Reputation = tonumber(reputation);
 	Legacy.Data.Account.Rank = tonumber(rank);
+	LegacyPanel_UpdateCurrency();
+	LegacyPanel_UpdateReputationRank();
 end
 
 -- LMSG_Q_GUILD_BONUS_INFO
@@ -216,8 +218,53 @@ end
 
 -- LMSG_Q_UNLOCKED_SPELL_COUNT (obs)
 
--- LMSG_Q_TRANSMOGS (nyi)
--- LMSG_Q_TRANSMOG_COLLECTIONS (nyi)
+-- LMSG_Q_TRANSMOGS
+function Legacy_HandleTransmogInfo(msg)
+	Legacy.Data.Transmog.EquipSlot = {};
+	local set = Legacy_SplitToSet(msg, ":");
+	for i = 1, #set, 2 do
+		Legacy.Data.Transmog.EquipSlot[tonumber(set[i])] = tonumber(set[i+1]);
+	end
+	LegacyPanel_UpdateTransmog();
+end
+
+-- LMSG_Q_TRANSMOG_COLLECTIONS
+function Legacy_HandleTransmogCollectionInfo(msg)
+	Legacy.Data.Transmog.Collection = {};
+	local set = Legacy_SplitToSet(msg, ":");
+	for i = 1, #set, 1 do
+		Legacy.Data.Transmog.Collection[tonumber(set[i])] = true;
+	end
+	LegacyPanel_LoadTransmogCollection();
+	LegacyPanel_UpdateTransmogCollectionCount();
+end
+
+-- LMSG_Q_TRANSMOG_SLOTS
+function Legacy_HandleTransmogSlotInfo(msg)
+	Legacy.Data.Transmog.Slot = {};
+	local set = Legacy_SplitToSet(msg, ":");
+	for i = 1, #set, 2 do
+		Legacy.Data.Transmog.Slot[tonumber(set[i])] = tonumber(set[i+1]);
+	end
+	LegacyPanel_UpdateTransmogSlot();
+end
+
+-- LMSG_Q_SINGLE_TRANSMOG_SLOT
+function Legacy_HandleSingleTransmogSlotInfo(msg)
+	local slot, entry = Legacy_Fetch(msg);
+	Legacy.Data.Transmog.Slot[tonumber(slot)] = tonumber(entry);
+	if (tonumber(slot) == Legacy.Var.Nav.Selected.TransmogSlot) then
+		LegacyPanel_UpdateTransmogSlot();
+		LegacyPanel_LoadTransmogCollection();
+	end
+end
+
+-- LMSG_Q_SINGLE_TRANSMOG
+function Legacy_HandleSingleTransmogInfo(msg)
+	local slot, entry = Legacy_Fetch(msg);
+	Legacy.Data.Transmog.EquipSlot[tonumber(slot)] = tonumber(entry);
+	LegacyPanel_UpdateTransmog();
+end
 
 -- LMSG_Q_OWNED_MARKET_SPELLS
 function Legacy_HandleOwnedMarketSpellInfo(msg)
@@ -284,9 +331,6 @@ function Legacy_HandleReputationItemInfo(msg)
 	LegacyPanel_UpdateReputation();
 	LegacyPanel_UpdateReputationNavState();
 end
-
--- LMSG_Q_TRANSMOG_COLLECTION_SLOT (nyi)
--- LMSG_Q_TRANSMOG_SLOT (nyi)
 
 -- LMSG_MSG
 function Legacy_HandleMessage(msg)

@@ -237,3 +237,17 @@ StaticPopupDialogs["LEGACY_LEARN_CLASS_SKILL_CONFIRM"] =
     exclusive = 1,
     hideOnEscape = 1,
 }
+
+StaticPopupDialogs["LEGACY_COLLECT_TRANSMOG_CONFIRM"] =
+{
+    text = LEGACY_COLLECT_TRANSMOG,
+    button1 = LEGACY_CONFIRM,
+    button2 = LEGACY_CANCEL,
+    OnAccept = function(self)
+        Legacy_DoQuery(LMSG_A_COLLECT_TRANSMOG, self.entry);
+    end,
+    OnCancel = function() end,
+    timeout = 0,
+    exclusive = 1,
+    hideOnEscape = 1,
+}

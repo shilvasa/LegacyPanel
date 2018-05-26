@@ -74,6 +74,11 @@ function Legacy_QualityColor(quality)
 	end
 end
 
+function Legacy_QualityColorShift(quality, s)
+	local r, g, b, a = Legacy_QualityColor(quality);
+	return min(1, r + s), min(1, g + s), min(1, b + s), a;
+end
+
 function Legacy_QualityColorNA(quality)
 	if (quality == 0) then
 		return 0.5, 0.5, 0.5;
@@ -214,4 +219,27 @@ LEGACY_ROMAN_NUMBER =
 
 function Legacy_RomanN(n)
 	return LEGACY_ROMAN_NUMBER[n];
+end
+
+function Legacy_GetElementCount(t, ls)
+	local count = 0;
+	for _, _ in pairs(t) do
+		count = count + 1;
+	end
+	if (count > ls) then
+		count = count - ls;
+	end
+	return count;
+end
+
+function Legacy_ActivatedRuneCount()
+	local count = 0;
+	for i = 0, 2 do
+		for j = 1, 10 do
+			if (Legacy.Data.Character.Rune[i][j] ~= 0) then
+				count = count + 1;
+			end
+		end
+	end
+	return count;
 end

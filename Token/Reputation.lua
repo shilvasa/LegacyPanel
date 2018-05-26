@@ -242,3 +242,7 @@ function LegacyPanel_OnClickReputationNavToken(self, button, down)
 		end
 	end
 end
+
+function LegacyPanel_UpdateReputationRank()
+	Legacy.UI.Home.Nav[LEGACY_PAGE_REPUTATION].Desc:SetText(Legacy.Data.Account.Rank);
+end

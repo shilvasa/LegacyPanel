@@ -314,25 +314,6 @@
             </OnClick>
         </Scripts>
     </Button>
-	<Button name="LegacyTransmogSlotToken" inherits="LegacyTokenTemplate" virtual="true">
-        <Scripts>
-            <OnLoad>
-                LegacyPanel_OnLoadTransmogSlotToken(self);
-            </OnLoad>
-            <OnEnter>
-                LegacyPanel_OnEnterTransmogSlotToken(self, motion);
-            </OnEnter>
-            <OnLeave>
-                LegacyPanel_OnLeaveTransmogSlotToken(self, motion);
-            </OnLeave>
-            <OnClick>
-                LegacyPanel_OnClickTransmogSlotToken(self, button, down);
-            </OnClick>
-			<OnUpdate>
-				LegacyPanel_OnUpdateTransmogSlotToken(self, elapsed);
-			</OnUpdate>
-        </Scripts>
-    </Button>
 	<Button name="LegacyTransmogToken" inherits="LegacyTokenTemplate" virtual="true">
         <Scripts>
             <OnLoad>
@@ -347,24 +328,56 @@
             <OnClick>
                 LegacyPanel_OnClickTransmogToken(self, button, down);
             </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyTransmogSlotToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadTransmogSlotToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterTransmogSlotToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveTransmogSlotToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickTransmogSlotToken(self, button, down);
+            </OnClick>
+        </Scripts>
+    </Button>
+	<Button name="LegacyTransmogCollectionToken" inherits="LegacyTokenTemplate" virtual="true">
+        <Scripts>
+            <OnLoad>
+                LegacyPanel_OnLoadTransmogCollectionToken(self);
+            </OnLoad>
+            <OnEnter>
+                LegacyPanel_OnEnterTransmogCollectionToken(self, motion);
+            </OnEnter>
+            <OnLeave>
+                LegacyPanel_OnLeaveTransmogCollectionToken(self, motion);
+            </OnLeave>
+            <OnClick>
+                LegacyPanel_OnClickTransmogCollectionToken(self, button, down);
+            </OnClick>
 			<OnUpdate>
-				LegacyPanel_OnUpdateTransmogToken(self, elapsed);
+				LegacyPanel_OnUpdateTransmogCollectionToken(self, elapsed);
 			</OnUpdate>
         </Scripts>
     </Button>
-	<Button name="LegacyTransmogNavToken" inherits="LegacyTokenTemplate" virtual="true">
+	<Button name="LegacyTransmogCollectionNavToken" inherits="LegacyTokenTemplate" virtual="true">
         <Scripts>
             <OnLoad>
-                LegacyPanel_OnLoadTransmogNavToken(self);
+                LegacyPanel_OnLoadTransmogCollectionNavToken(self);
             </OnLoad>
             <OnEnter>
-                LegacyPanel_OnEnterTransmogNavToken(self, motion);
+                LegacyPanel_OnEnterTransmogCollectionNavToken(self, motion);
             </OnEnter>
             <OnLeave>
-                LegacyPanel_OnLeaveTransmogNavToken(self, motion);
+                LegacyPanel_OnLeaveTransmogCollectionNavToken(self, motion);
             </OnLeave>
             <OnClick>
-                LegacyPanel_OnClickTransmogNavToken(self, button, down);
+                LegacyPanel_OnClickTransmogCollectionNavToken(self, button, down);
             </OnClick>
         </Scripts>
     </Button>
